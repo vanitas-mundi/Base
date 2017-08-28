@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{752E8911-60E4-4CEA-BF25-99411A134103}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BCW.Foundation.Base</RootNamespace>
+    <AssemblyName>Base</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Base.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Base.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Base.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Base.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>strong_name_key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\EnumDisplayName.vb" />
+    <Compile Include="Attributes\ViewGeneratorAttribute.vb" />
+    <Compile Include="Attributes\ViewTypes.vb" />
+    <Compile Include="Binding\NotifyPropertyChangedBase.vb" />
+    <Compile Include="Binding\ZoomFactorChangedEvenArgs.vb" />
+    <Compile Include="Binding\ZoomManager.vb" />
+    <Compile Include="CSVHandling\CSVObject.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\AcademicYear.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\AcademicYearClassification.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\AcademicYearClassificationPeriod.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\ClassificationItem.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Enums\CodeFormats.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Enums\PeriodNames.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Enums\Periods.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Interfaces\IClassificationItem.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\PeriodCode.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Semester.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Semesters.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Trimester.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHandling\Trimesters.vb" />
+    <Compile Include="DateTimeHandling\AcademicYearHelper.vb" />
+    <Compile Include="DateTimeHandling\DateTimeChecks.vb" />
+    <Compile Include="DateTimeHandling\DateTimeConvert.vb" />
+    <Compile Include="DateTimeHandling\DateTimeDelta.vb" />
+    <Compile Include="DateTimeHandling\DateTimeDifferences.vb" />
+    <Compile Include="DateTimeHandling\DateTimeFormat.vb" />
+    <Compile Include="DateTimeHandling\DateTimeFunctions.vb" />
+    <Compile Include="DateTimeHandling\DateTimeHelper.vb" />
+    <Compile Include="DateTimeHandling\DateTimeNames.vb" />
+    <Compile Include="DateTimeHandling\DateTimePublicHolidays.vb" />
+    <Compile Include="DateTimeHandling\Enums\MonthNamesEnglish.vb" />
+    <Compile Include="DateTimeHandling\Enums\MonthNamesGerman.vb" />
+    <Compile Include="DateTimeHandling\Enums\MonthNamesShortEnglish.vb" />
+    <Compile Include="DateTimeHandling\Enums\MonthNamesShortGerman.vb" />
+    <Compile Include="DateTimeHandling\Enums\WeekDayNamesEnglish.vb" />
+    <Compile Include="DateTimeHandling\Enums\WeekDayNamesGerman.vb" />
+    <Compile Include="DateTimeHandling\Enums\WeekDayNamesShortEnglish.vb" />
+    <Compile Include="DateTimeHandling\Enums\WeekDayNamesShortGerman.vb" />
+    <Compile Include="DateTimeHandling\Interfaces\IMonthNamesHelper.vb" />
+    <Compile Include="DateTimeHandling\Interfaces\IWeekDayNamesHelper.vb" />
+    <Compile Include="DateTimeHandling\MonthNamesHelperBase.vb" />
+    <Compile Include="DateTimeHandling\MonthNamesHelperEnglish.vb" />
+    <Compile Include="DateTimeHandling\MonthNamesHelperGerman.vb" />
+    <Compile Include="DateTimeHandling\PublicHolidays\Interfaces\IPublicHolidayItem.vb" />
+    <Compile Include="DateTimeHandling\PublicHolidays\Interfaces\IPublicHolidaysLogic.vb" />
+    <Compile Include="DateTimeHandling\PublicHolidays\PublicHolidays.vb" />
+    <Compile Include="DateTimeHandling\PublicHolidays\PublicHolidaysLogicBase.vb" />
+    <Compile Include="DateTimeHandling\PublicHolidays\PublicHolidaysLogicGermany.vb" />
+    <Compile Include="DateTimeHandling\PublicHolidays\PublicHolidaysLogicLuxembourg.vb" />
+    <Compile Include="DateTimeHandling\WeekDayNamesHelperBase.vb" />
+    <Compile Include="DateTimeHandling\WeekDayNamesHelperEnglish.vb" />
+    <Compile Include="DateTimeHandling\WeekDayNamesHelperGerman.vb" />
+    <Compile Include="ExtensionMethods\MailMessageExtensions.vb" />
+    <Compile Include="Helper.vb" />
+    <Compile Include="IOHandling\FileSystemChecks.vb" />
+    <Compile Include="IOHandling\FileSystemManipulation.vb" />
+    <Compile Include="IOHandling\FileSystemNaming.vb" />
+    <Compile Include="IOHandling\FileSystemReader.vb" />
+    <Compile Include="IOHandling\FileSystemReplace.vb" />
+    <Compile Include="NumberHandling\NumberChecks.vb" />
+    <Compile Include="NumberHandling\NumberHelper.vb" />
+    <Compile Include="ReflectionHandling\ReflectionAttribute.vb" />
+    <Compile Include="ReflectionHandling\ReflectionChecks.vb" />
+    <Compile Include="ReflectionHandling\ReflectionConstructor.vb" />
+    <Compile Include="ReflectionHandling\ReflectionConvert.vb" />
+    <Compile Include="ReflectionHandling\ReflectionMethod.vb" />
+    <Compile Include="ReflectionHandling\ReflectionProperty.vb" />
+    <Compile Include="ReflectionHandling\ReflectionPropertyDescriptor.vb" />
+    <Compile Include="ReflectionHandling\ReflectionPropertyInfo.vb" />
+    <Compile Include="SettingsBCW.vb" />
+    <Compile Include="StringHandling\Attributes\CultureCodeAttribute.vb" />
+    <Compile Include="EnumHandling\EnumMethods.vb" />
+    <Compile Include="StringHandling\StringChecks.vb" />
+    <Compile Include="StringHandling\StringFormat.vb" />
+    <Compile Include="StringHandling\StringFunctions.vb" />
+    <Compile Include="StringHandling\StringReplace.vb" />
+    <Compile Include="StringHandling\StringTextCompare.vb" />
+    <Compile Include="UniversalDrawing\UniversalFont.vb" />
+    <Compile Include="Colors\NamedColor.vb" />
+    <Compile Include="Colors\NamedColors.vb" />
+    <Compile Include="Colors\NamedColorsEnum.vb" />
+    <Compile Include="Events\EventHandlerInfo.vb" />
+    <Compile Include="Events\EventHandlerManager.vb" />
+    <Compile Include="Events\EventHandlersDisposerClass.vb" />
+    <Compile Include="Logging\FileLogger.vb" />
+    <Compile Include="ReflectionHandling\ReflectionEnum.vb" />
+    <Compile Include="SystemMessaging\SystemMessages\AddSystemMessage.vb" />
+    <Compile Include="SystemMessaging\SystemMessages\CancelSystemMessage.vb" />
+    <Compile Include="SystemMessaging\SystemMessages\DeleteSystemMessage.vb" />
+    <Compile Include="UniversalDrawing\ImageMethods.vb" />
+    <Compile Include="UniversalDrawing\ImageSize.vb" />
+    <Compile Include="UniversalDrawing\ImageSizeInfo.vb" />
+    <Compile Include="UniversalDrawing\UniversalSize.vb" />
+    <Compile Include="ErrorHandling\ErrorManager.vb" />
+    <Compile Include="ErrorHandling\StackTraceInfo.vb" />
+    <Compile Include="ErrorHandling\StackTraceInfoList.vb" />
+    <Compile Include="Cryptography\CryptHelper.vb" />
+    <Compile Include="Etc\Lambda.vb" />
+    <Compile Include="Cryptography\Hashes\MD4Hash.vb" />
+    <Compile Include="ExtensionMethods\CharExtensions.vb" />
+    <Compile Include="ExtensionMethods\Common.vb" />
+    <Compile Include="ExtensionMethods\DateTimeExtensions.vb" />
+    <Compile Include="ExtensionMethods\EnumerableCharExtensions.vb" />
+    <Compile Include="ExtensionMethods\EnumerableExtensions.vb" />
+    <Compile Include="ExtensionMethods\EnumerableStringExtensions.vb" />
+    <Compile Include="ExtensionMethods\StringExtensions.vb" />
+    <Compile Include="ExtensionMethods\ObjectExtensions.vb" />
+    <Compile Include="ExtensionMethods\StructureExtensions.vb" />
+    <Compile Include="Generators\PasswordGenerator.vb" />
+    <Compile Include="Generators\Interfaces\UserNameFormats.vb" />
+    <Compile Include="Generators\UserNameGenerator.vb" />
+    <Compile Include="IniHandling\IniParser.vb" />
+    <Compile Include="IniHandling\Section.vb" />
+    <Compile Include="IniHandling\Sections.vb" />
+    <Compile Include="IniHandling\SectionValue.vb" />
+    <Compile Include="IOHandling\FileSystemHelper.vb" />
+    <Compile Include="Logging\Enums\EventLogNames.vb" />
+    <Compile Include="Logging\EventLogWriter.vb" />
+    <Compile Include="Messages\Enums\MessageBoxWin32ApiButtons.vb" />
+    <Compile Include="Messages\Enums\MessageBoxWin32ApiYesNoDefaultButtons.vb" />
+    <Compile Include="Messages\Enums\MessageBoxWin32ApiResults.vb" />
+    <Compile Include="Messages\Enums\MessageBoxWin32ApiOptions.vb" />
+    <Compile Include="Messages\Enums\MessageBoxWin32ApiIcons.vb" />
+    <Compile Include="Messages\MessageBoxWin32Api.vb" />
+    <Compile Include="Messages\Enums\MessageBoxWin32ApiDefaultButtons.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReflectionHandling\ReflectionHelper.vb" />
+    <Compile Include="ReflectionHandling\ReflectionInfo.vb" />
+    <Compile Include="Serialization\Interfaces\ISerialization.vb" />
+    <Compile Include="Serialization\Interfaces\ISerializationOf.vb" />
+    <Compile Include="Serialization\ObjectSerializers\BinaryObjectSerializer.vb" />
+    <Compile Include="Serialization\ObjectSerializers\JsonObjectSerializer.vb" />
+    <Compile Include="Serialization\ObjectSerializers\SoapObjectSerializer.vb" />
+    <Compile Include="Serialization\ObjectSerializers\XmlObjectSerializer.vb" />
+    <Compile Include="Serialization\ObjectSerializer.vb" />
+    <Compile Include="Serialization\Serializer.vb" />
+    <Compile Include="Serialization\Serializers\Binary.vb" />
+    <Compile Include="Serialization\Serializers\Json.vb" />
+    <Compile Include="Serialization\Serializers\Soap.vb" />
+    <Compile Include="Serialization\Serializers\Xml.vb" />
+    <Compile Include="StringHandling\CultureCodes.vb" />
+    <Compile Include="StringHandling\CultureStringStorage.vb" />
+    <Compile Include="StringHandling\StringHelper.vb" />
+    <Compile Include="StringHandling\StringStorage.vb" />
+    <Compile Include="StringHandling\StringStorageItem.vb" />
+    <Compile Include="SystemMessaging\Subscribers.vb" />
+    <Compile Include="SystemMessaging\SubscriberInfo.vb" />
+    <Compile Include="SystemMessaging\SystemMessageQueue.vb" />
+    <Compile Include="SystemMessaging\Interfaces\ISystemMessage.vb" />
+    <Compile Include="SystemMessaging\SystemMessageBase.vb" />
+    <Compile Include="SystemMessaging\SystemMessages\RefreshSystemMessage.vb" />
+    <Compile Include="SystemMessaging\SystemMessages\SaveSystemMessage.vb" />
+    <Compile Include="SystemMessaging\SystemMessages\CommonSystemMessage.vb" />
+    <Compile Include="Etc\ValueAndId.vb" />
+    <Compile Include="vCardBuilder\Enums\vCardAddressTypes.vb" />
+    <Compile Include="vCardBuilder\Enums\vCardImageLinkTypes.vb" />
+    <Compile Include="vCardBuilder\Enums\vCardMailTypes.vb" />
+    <Compile Include="vCardBuilder\Enums\vCardPhoneNumberTypes.vb" />
+    <Compile Include="vCardBuilder\Enums\vCardUrlTypes.vb" />
+    <Compile Include="vCardBuilder\Interfaces\IvCardFactory.vb" />
+    <Compile Include="vCardBuilder\vCard.vb" />
+    <Compile Include="vCardBuilder\vCardAddress.vb" />
+    <Compile Include="vCardBuilder\vCardFactoryBase.vb" />
+    <Compile Include="vCardBuilder\vCardFullName.vb" />
+    <Compile Include="vCardBuilder\vCardImage.vb" />
+    <Compile Include="vCardBuilder\vCardMaillAddress.vb" />
+    <Compile Include="vCardBuilder\vCardOrganization.vb" />
+    <Compile Include="vCardBuilder\vCardPhoneNumber.vb" />
+    <Compile Include="vCardBuilder\vCardURL.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="strong_name_key.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
