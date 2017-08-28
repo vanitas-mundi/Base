@@ -1,0 +1,2998 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Base
+</name>
+</assembly>
+<members>
+<member name="T:BCW.Foundation.Base.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="T:BCW.Foundation.Base.CsvHandling.CsvObject">
+ <summary>
+ http://de.wikipedia.org/wiki/CSV_(Dateiformat)
+ </summary>
+</member>
+<member name="F:BCW.Foundation.Base.CsvHandling.CsvObject._rowDelimeter">
+ <summary>Zeichen zur Trennung von Datensätzen (Zeilen).</summary>
+</member>
+<member name="F:BCW.Foundation.Base.CsvHandling.CsvObject._textDelimeter">
+ <summary>
+ Feldbegrenzerzeichen (auch: Textbegrenzungszeichen).
+ Zeichen, zur Nutzung von Sonderzeichen innerhalb der Daten.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.CsvHandling.CsvObject.TrimWhiteSpace">
+<summary>Legt fest, ob Werte getrimmt werden.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.CsvHandling.CsvObject.HasColumnsRow">
+ <summary>
+ cvs-Datei enthält Spaltenüberschriften in der ersten Zeile.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.CsvHandling.CsvObject.ColumnIndexOf(System.String)">
+ <summary>
+ Liefert den Spaltenindex anhand des Spaltennamens.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.CsvHandling.CsvObject.ColumnDelimeter">
+ <summary>
+ Zeichen zur Trennung von Datenfeldern (Spalten).
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.CsvHandling.CsvObject.Columns">
+ <summary>
+ Spalten der csv-Datei.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.CsvHandling.CsvObject.Rows">
+ <summary>
+ Zeilen der csv-Datei.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.ValueToCsvValue(System.String,System.Boolean)">
+ <summary>
+ Formatiert einen Wert anhand der csv-Spezifikation und liefert diesen zurück.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.RowToString(System.Collections.Generic.IEnumerable{System.String},System.Boolean)">
+ <summary>
+ Konvertiert die Zeile row in einen csv-formatierten String.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.NewRow">
+ <summary>
+ Liefert ein Template-Arry für eine neue Zeile anhand der Spaltenanzahl und initialisert es mit Leerzeichen.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.NewRow(System.String)">
+ <summary>
+ Liefert ein Template-Arry für eine neue Zeile anhand der 
+ Spaltenanzahl und initialisert es mit dem Wert von defaultValue.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.AddRow(System.String[])">
+ <summary>
+ Fügt eine Zeile der csv-Datei hinzu.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.RemoveRow(System.Int32)">
+ <summary>
+ Entfernt die Zeile aus der csv-Datei des angegebenen Indexes.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.Save(System.String,System.Boolean,System.Boolean)">
+ <summary>
+ Speichert die csv-Datei unter fileName.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.Save(System.String)">
+ <summary>
+ Speichert die csv-Datei unter fileName.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.Load(System.String)">
+ <summary>
+ Lädt eine csv-Datei ins CsvObject.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.Load(System.String,System.Text.Encoding)">
+ <summary>
+ Lädt eine csv-Datei ins CsvObject.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.ToString(System.Boolean,System.Boolean)">
+ <summary>
+Wandelt den Inhalt des CsvObjects in einen csv-formatierten String um und liefert diesen zurück.
+ </summary>
+ <param name="writeHeader">Legt fest, ob eine Zeile für Spaltennamen zurückgegeben wird.</param>
+ <param name="quotedValues">Legt fest, ob Werte in Quoten gesetzt werden. Spaltennamen sind davon unberücksichtigt.</param>
+</member>
+<member name="M:BCW.Foundation.Base.CsvHandling.CsvObject.ToString">
+ <summary>
+Wandelt den Inhalt des CsvObjects in einen csv-formatierten String um und liefert diesen zurück.
+ </summary>
+</member>
+<member name="T:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear">
+<summary>Repräsentiert ein Studienjahr.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.CurrentYear">
+<summary>Liefert das aktuelle Studienjahr.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.CurrentSemester">
+<summary>Liefert das aktuelle Semester im aktuellen Studienjahr.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.CurrentTrimester">
+<summary>Liefert das aktuelle Trimester im aktuellen Studienjahr.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.Year">
+<summary>Das Jahr des Studienjahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.Semesters">
+<summary>Liefert die Semester des Studienjahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.Trimesters">
+<summary>Liefert die Trimester des Studienjahres.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYear.CreateAcademicYear(System.Int32)">
+<summary>Liefert das Studienjahr des angegebenen Jahres.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassification">
+<summary>Repräsentiert die zeitlichen Einteilungen in einem Studienjahr (z.B. zwei Semester).</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassification.DurationInMonth">
+<summary>Liefert die Dauer einer Periode (z.B. Semester) in Monaten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassification.GetPeriod(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das AcademicYearClassificationPeriod-Objekt zur angegebenen Periode</summary>
+</member>
+<member name="T:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassificationPeriod">
+<summary>Repräsentiert eine Periode (zeitliche Einteilung) in einem Studienjahr (z.B. Semester)</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassificationPeriod.StartMonth">
+<summary>Liefert den Monat des Semesterstarts.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassificationPeriod.EndMonth">
+<summary>Liefert den Monat des Semesterendes.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassificationPeriod.Period">
+<summary>Liefert die SemesterPeriode.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassificationPeriod.PeriodName">
+<summary>Liefert den Namen der Semesterperiode.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.AcademicYearClassificationPeriod.MonthsInPeriod">
+<summary>Liefert die Monate der Semester-Periode.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.StartDate">
+<summary>Startdatum des Semesters.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.EndDate">
+<summary>Endedatum des Semesters.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.PeriodCode">
+<summary>Kürzel des Semesters.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.PeriodYear">
+<summary>Jahr des Semesters.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.Period">
+<summary>Periode des Semesters.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.PeriodName">
+<summary>Liefert den Namen der Semester-Periode.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.DurationInMonth">
+<summary>Liefert die Dauer in Monaten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.ClassificationItem.Difference(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Interfaces.IClassificationItem)">
+<summary>Ermittlet die Differenz in Perioden.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats.YearBlankPeriod">
+<summary>2017 SS</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats.PeriodBlankYear">
+<summary>SS 2017</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats.YearHyphenPeriod">
+<summary>2017-SS</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats.PeriodHyphenYear">
+<summary>SS-2017</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats.YearPeriod">
+<summary>2017SS</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats.PeriodYear">
+<summary>SS2017</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.PeriodNames.Wintersemester">
+<summary>Wintersemester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.PeriodNames.Sommersemester">
+<summary>Sommersemester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.PeriodNames.Wintertrimester">
+<summary>Wintertrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.PeriodNames.Frühjahrstrimester">
+<summary>Frühjahrstrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.PeriodNames.Sommertrimester">
+<summary>Sommertrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.PeriodNames.Herbsttrimester">
+<summary>Herbsttrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods.WS">
+<summary>Wintersemester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods.SS">
+<summary>Sommersemester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods.WT">
+<summary>Wintertrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods.FT">
+<summary>Frühjahrstrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods.ST">
+<summary>Sommertrimester</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods.HT">
+<summary>Herbsttrimester</summary>
+</member>
+<member name="T:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode">
+<summary>Repräsentiert das Periodenkürzel einer expliziten Periode (z.B. Semester),
+der Einteilung des Studienjahres (z.B. 2017 SS).
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode.Year">
+<summary>Jahr der Periode (bsp. Semesters).</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode.Period">
+<summary>Periodenkürzel der Periode (bsp. Semesters).</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode.GetFormatedPeriodCode(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats)">
+<summary>Liefert das formatierte Periodenkürzel.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester.Current">
+<summary>Liefert das aktuelle Semester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester.AddInternal(System.Int32)">
+<summary>
+Addiert die Anzahl count zur Periode und liefert das Ergebnis als neues Objekt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester.SubstractInternal(System.Int32)">
+<summary>
+Subtrahiert die Anzahl count von der Periode und liefert das Ergebnis als neues Objekt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester.GetByDate(System.DateTime)">
+<summary>Liefert das Semester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester.Add(System.Int32)">
+<summary>Addiert die Anzahl count zur Periode und liefert das Ergebnis als neues Semester-Objekt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester.Substract(System.Int32)">
+<summary>Subtrahiert die Anzahl count von der Periode und liefert das Ergebnis als neues Semester-Objekt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetByDate(System.DateTime)">
+<summary>Liefert das Semester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetByPeriodCode(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode)">
+<summary>Liefert das Semester des angegebenen Semesterkürzels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetByYearAndPeriod(System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das Semester des angegebenen Jahres und Periode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetSemester">
+<summary>Liefert das aktuelle Semester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetSemester(System.DateTime)">
+<summary>Liefert das Semester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetSemester(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode)">
+<summary>Liefert das Semester des angegebenen Semesterkürzels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semesters.GetSemester(System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das Semester des angegebenen Jahres und Periode.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester.Current">
+<summary>Liefert das aktuelle Trimester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester.AddInternal(System.Int32)">
+<summary>
+Addiert die Anzahl count zur Periode und liefert das Ergebnis als neues Objekt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester.SubstractInternal(System.Int32)">
+<summary>
+Subtrahiert die Anzahl count von der Periode und liefert das Ergebnis als neues Objekt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester.GetByDate(System.DateTime)">
+<summary>Liefert das Trimester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester.Add(System.Int32)">
+<summary>Addiert die Anzahl count zur Periode und liefert das Ergebnis als neues Trimester-Objekt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester.Substract(System.Int32)">
+<summary>Subtrahiert die Anzahl count von der Periode und liefert das Ergebnis als neues Trimester-Objekt.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.Current">
+<summary>Liefert das aktuelle Trimester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetByDate(System.DateTime)">
+<summary>Liefert das Trimester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetByPeriodCode(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode)">
+<summary>Liefert das Trimester des angegebenen Trimesterkürzels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetByYearAndPeriod(System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das Trimester des angegebenen Jahres und Periode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetTrimester">
+<summary>Liefert das aktuelle Trimester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetTrimester(System.DateTime)">
+<summary>Liefert das Trimester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetTrimester(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode)">
+<summary>Liefert das Trimester des angegebenen Trimesterkürzels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimesters.GetTrimester(System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das Trimester des angegebenen Jahres und Periode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemesterPeriodCodes(System.DateTime,System.Int32)">
+<summary>Liefert die Semesterkürzel ab startDate für die nächsten count Semester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemesterPeriodCodes(System.DateTime,System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.CodeFormats)">
+<summary>Liefert die Semesterkürzel ab startDate für die nächsten count Semester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetTrimesterPeriodCodes(System.DateTime,System.Int32)">
+<summary>Liefert die Trimesterkürzel ab startDate für die nächsten count Trimester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetAcademicYear">
+<summary>Liefert das aktuelle Studienjahr.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetAcademicYear(System.Int32)">
+<summary>Liefert das Studienjahr des angegebenen Jahres.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemester">
+<summary>Liefert das aktuelle Semester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemester(System.DateTime)">
+<summary>Liefert das Semester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemester(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode)">
+<summary>Liefert das Semester der angegebenen Periodenkürzels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemester(System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das Semester des angegebenen Jahres und Periode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetTrimester">
+<summary>Liefert das aktuelle Trimester.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetTrimester(System.DateTime)">
+<summary>Liefert das Trimester des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetTrimester(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.PeriodCode)">
+<summary>Liefert das Trimester der angegebenen Periodenkürzels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetTrimester(System.Int32,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums.Periods)">
+<summary>Liefert das Trimester des angegebenen Jahres und Periode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetSemesterDifference(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Semester)">
+<summary>Liefert die Differenz zwischen zwei Semestern (z.B. WS 2016 | SS 2017 = 1).</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.AcademicYearHelper.GetTrimesterDifference(BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester,BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Trimester)">
+<summary>Liefert die Differenz zwischen zwei Semestern (z.B. WS 2016 | SS 2017 = 1).</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeChecks.IsDateTime(System.String)">
+<summary>Prüft ob der Wert von s ein Datum/Uhrzeit-Wert ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeChecks.IsDateTime(BCW.Foundation.Base.DateTimeHandling.DateTimeDelta)">
+<summary>Prüft ob das DateTimeDelta-Objekt ein gültiger Datum/Uhrzeit-Wert ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeChecks.IsDate(System.String)">
+<summary>Prüft ob der Wert von s ein Datum ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeChecks.IsTime(System.String)">
+<summary>Prüft ob der Wert von s eine Uhrzeit ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeChecks.IsWeekEnd(System.DateTime)">
+<summary>Prüft, ob das angegebene Datum auf ein Wochenende fällt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeChecks.IsSundayOrPublicHoliday(System.DateTime)">
+<summary>Prüft, ob das angegebene Datum auf einen Sonn- oder Feiertag fällt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeConvert.ToNullableDateTime(System.Object)">
+<summary>
+Liefert ein Nullable ohne Wert, wenn obj folgende Werte besitzt:
+DBNull, Nothing, 01.01.0001 oder kein Datum ist.
+Im anderen Fall wird ein gültiges Datetime geliefert.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeConvert.ToDefaultDateTime(System.Object,System.DateTime)">
+<summary>
+Liefert den Wert von defaultValue, wenn obj folgende Werte besitzt:
+DBNull, Nothing, 01.01.0001 oder kein Datum ist.
+Im anderen Fall wird ein obj als Datetime geliefert.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Years">
+<summary>Liefert die Jahre des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Months">
+<summary>Liefert die Monate des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Days">
+<summary>Liefert die Tage des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Hours">
+<summary>Liefert die Stunden des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Minutes">
+<summary>Liefert die Minuten des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Seconds">
+<summary>Liefert die Sekunden des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.Milliseconds">
+<summary>Liefert die Millisekunden des Zeit-Deltas oder legt diese fest.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.ToTimeSpan">
+<summary>Liefert das DateTimeDelta-Objekt als TimeSpan-Objekt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.ToDateTime">
+<summary>
+Liefert das DateTimeDelta-Objekt als DateTime. Sollte die Umwandlung nicht möglich sein,
+dann wird MinValue von DateTime geliefert.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.ToDateTimeString">
+<summary>Liefert das  DateTimeDelta-Objekt als String im Format DD.MM.YYY hh:mm:ss.</summary>
+ <returns></returns>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.ToString">
+<summary>
+Wandelt das DateTimeDelta-Objekt als DateTime um und liefert das Ergebnis dessen ToString-Methode. 
+Sollte die Umwandlung nicht möglich sein, dann wird ToString von DateTime.MinValue geliefert.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDelta.ToString(System.String)">
+<summary>
+Wandelt das DateTimeDelta-Objekt als DateTime um und liefert das Ergebnis dessen ToString-Methode. 
+Sollte die Umwandlung nicht möglich sein, dann wird ToString von DateTime.MinValue geliefert.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.DateDelta(System.DateTime,System.DateTime)">
+<summary>
+Liefert das Delta zwischen zwei Daten als TimeSpan, das Ergebnis ist immer positiv.
+Bsp.: GetDateDelta(#01/01/2017#, #01/01/2016#) -> 366 TotalDays,
+GetDateDelta(#01/01/2017#, #01/01/2016#) -> 366 TotalDays 
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.InWeeks(System.DateTime,System.DateTime)">
+<summary>Liefert die Differenz der übergebenen Daten in Wochen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.InDays(System.DateTime,System.DateTime)">
+<summary>Liefert die Differenz der übergebenen Daten in Tagen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.InHours(System.DateTime,System.DateTime)">
+<summary>Liefert die Differenz der übergebenen Daten in Stunden.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.InMinutes(System.DateTime,System.DateTime)">
+<summary>Liefert die Differenz der übergebenen Daten in Minuten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.InSeconds(System.DateTime,System.DateTime)">
+<summary>Liefert die Differenz der übergebenen Daten in Sekunden.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeDifferences.GetDelta(System.DateTime,System.DateTime)">
+<summary>Liefert die Differenz der übergebenen Daten als DateTimeDelta-Objekt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFormat.ToYMD(System.Object)">
+<summary>Formatiert ein Datum in das Datums-Format yyyy-MM-dd.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFormat.ToDMY(System.Object)">
+<summary>Formatiert ein Datum in das Datums-Format dd.MM.yyyy.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFormat.ToHM(System.Object)">
+<summary>Formatiert ein Datum in das Stunden-Format HH:mm.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFormat.ToHMS(System.Object)">
+<summary>Formatiert ein Datum in das Stunden-Format HH:mm:ss.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFormat.ToYMDHMS(System.Object)">
+<summary>Formatiert ein Datum in das Datums-Format dd.MM.yyyy..</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFunctions.MinDate(System.DateTime,System.DateTime)">
+<summary>
+Liefert von beiden übergebenen Daten das ältere.
+Bsp.: MinDate(#01/01/2017#, #01/01/2016#) -> #01/01/2016#
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFunctions.MaxDate(System.DateTime,System.DateTime)">
+<summary>
+Liefert von beiden übergebenen Daten das jüngere.
+Bsp.: MaxDate(#01/01/2017#, #01/01/2016#) -> #01/01/2017#
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFunctions.WeekOfYearFromCurrentCulture(System.DateTime)">
+<summary>Ermittelt die Kalenderwoche anhand der eingestellten Systemkultur.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFunctions.GetAge(System.DateTime)">
+<summary>Liefert das Alter anhand des Geburtsdatums birthDay zum heutigen Tage (Systemdatum).</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeFunctions.GetAge(System.DateTime,System.DateTime)">
+<summary>Liefert das Alter anhand des Geburtsdatums birthDay zum Betrachtungsjahr contemplationYear.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.Checks">
+<summary>Stellt Prüfungsmethoden für Datum und Zeit bereit.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.Convert">
+<summary>Stellt Konvertierungsmethoden für Datum und Zeit bereit.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.CultureCode">
+<summary></summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.Difference">
+<summary>Stellt Differenzmethoden für Datum und Zeit zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.Format">
+<summary>Stellt Formatierungsmethoden für Datum und Zeit zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.Functions">
+<summary>Stellt allgemeine Datum-, Zeit-Funktionen bereit.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.Names">
+<summary>Stellt lokalisierte Benamungen für Monate und Tage zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.PublicHolidays">
+<summary>Stellt Feiertagsfunktionalität bereit.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.DateTimeHelper.AcademicYears">
+<summary>Stellt Studienjahr-Funktionalität bereit (Semester, Trimester usw.).</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeNames.WeekDayNames">
+<summary>Liefert die Wochentagsnamen zum im DateTimeHelper hinterlegten CultureCode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeNames.WeekDayNames(BCW.Foundation.Base.StringHandling.CultureCodes)">
+<summary>Liefert die Wochentagsnamen zum angegebenen CultureCode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeNames.MonthNames">
+<summary>Liefert die Monatsnamen zum im DateTimeHelper hinterlegten CultureCode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimeNames.MonthNames(BCW.Foundation.Base.StringHandling.CultureCodes)">
+<summary>Liefert die Monatsnamen zum im DateTimeHelper hinterlegten CultureCode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimePublicHolidays.InitializeLogic(System.Int32)">
+<summary>
+Initialisiert die Feiertage des angegebenen Jahres.
+Alternativ kann Logic.Initialize aufgerufen werden.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimePublicHolidays.Logic">
+<summary>Liefert die Feiertage zum im DateTimeHelper hinterlegten CultureCode.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.DateTimePublicHolidays.Logic(BCW.Foundation.Base.StringHandling.CultureCodes)">
+<summary>Liefert die Feiertage zum angegebenen CultureCode.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.CurrentYear">
+<summary>Liefert das gewählte Betrachtungsjahr.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.Holidays">
+<summary>Liefert alle Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.FloatingHolidays">
+<summary>Liefert alle beweglichen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.FixedHolidays">
+<summary>Liefert alle fixen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.RegionalHolidays">
+<summary>Liefert alle regionalen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.NotRegionalHolidays">
+<summary>Liefert alle nicht regionalen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.Item(System.DateTime)">
+<summary>Liefert das IPublicHolidayItem zum angegebenen Datum validDate.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.IsPublicHoliday(System.DateTime)">
+<summary>Prüft ob das übergebene Datum ein Feiertag ist.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.PublicHolidayName(System.DateTime)">
+<summary>Ermittelt den Namen des Feiertages, des angegebenen Datums.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces.IPublicHolidaysLogic.Initialize(System.Int32)">
+<summary>Initialisiert die Feiertage des angegebenen Jahres</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.CurrentYear">
+<summary>Liefert das gewählte Betrachtungsjahr.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.Holidays">
+<summary>Liefert alle Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.FixedHolidays">
+<summary>Liefert alle fixen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.FloatingHolidays">
+<summary>Liefert alle beweglichen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.RegionalHolidays">
+<summary>Liefert alle regionalen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.NotRegionalHolidays">
+<summary>Liefert alle nicht regionalen Feiertage des gewählten Jahres.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.Item(System.DateTime)">
+<summary>Liefert das PublicHolidayItem zum angegebenen Datum validDate oder NULL.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.IsPublicHoliday(System.DateTime)">
+<summary>Prüft ob das übergebene Datum ein Feiertag ist.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicBase.PublicHolidayName(System.DateTime)">
+<summary>Ermittelt den Namen des Feiertages, des angegebenen Datums.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.BW">
+<summary>Baden-Württemberg</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.BY">
+<summary>Bayern</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.BE">
+<summary>Berlin</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.BB">
+<summary>Brandenburg</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.HB">
+<summary>Bremen</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.HH">
+<summary>Hamburg</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.HE">
+<summary>Hessen</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.MV">
+<summary>Mecklenburg-Vorpommern</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.NI">
+<summary>Niedersachsen</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.NW">
+<summary>Nordrhein-Westfalen</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.RP">
+<summary>Rheinland-Pfalz</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.SL">
+<summary>Saarland</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.SN">
+<summary>Sachsen</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.ST">
+<summary>Sachsen-Anhalt</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.SH">
+<summary>Schleswig-Holstein</summary>
+</member>
+<member name="F:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany.TH">
+<summary>Thüringen</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.GetHolidaysByFederalState(System.String)">
+<summary>Liefert die Feiertage eines Bundeslandes des gewählten Jahres.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.GetHolidaysByFederalState(BCW.Foundation.Base.DateTimeHandling.PublicHolidays.PublicHolidaysLogicGermany.FederalStateCodesGermany)">
+<summary>Liefert die Feiertage eines Bundeslandes des gewählten Jahres.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.MailMessageExtensions.Save(System.Net.Mail.MailMessage,System.String)">
+<summary>Speichert das MailMessage-Objekt als eml-Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.MailMessageExtensions.Save(System.Net.Mail.MailMessage,System.String,System.Boolean)">
+<summary>Speichert das MailMessage-Objekt als eml-Datei.</summary>
+<param name="addUnsentHeader">
+True = Write the Unsent header to the file so 
+the mail client knows this mail must be presented in "New message" mode
+ </param>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetIsIn``1(``0,System.Collections.Generic.IEnumerable{``0},System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetIsNumeric(System.String)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetAllMembersIn``1(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetIntersection(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetDifferenceQuantity(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetListOf``1(System.Collections.IEnumerable)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetArrayOf``1(System.Collections.IEnumerable)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.EnumerableCharExtensions.DifferenceQuantity``1(``0,System.Boolean,System.Collections.Generic.IEnumerable{System.Char})">
+ <summary>
+ Liefert die Differenzmenge.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="v"></param>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.EnumerableExtensions.DifferenceQuantity``1(``0,System.Collections.IEnumerable)">
+ <summary>
+ Liefert die Differenzmenge.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="v"></param>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.EnumerableStringExtensions.DifferenceQuantity``1(``0,System.Boolean,System.Collections.Generic.IEnumerable{System.String})">
+ <summary>
+ Liefert die Differenzmenge.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="v"></param>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:BCW.Foundation.Base.Helper.DateTime">
+<summary>Stellt Datum- und Zeit-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Helper.String">
+<summary>Stellt String-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Helper.Number">
+<summary>Stellt Funktionalität zur Bearbeitung von Zahlen zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Helper.Crypt">
+<summary>Stellt Krypthographie-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Helper.FileSystem">
+<summary>Stellt Funktionalität für den Zugriff auf das Dateisystem zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Helper.Reflection">
+<summary>Stellt Refection-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemChecks.IsFileInUse(System.String)">
+<summary>Prüft, ob eine Datei bereits geöffnet ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemManipulation.CreateFolderIfNotExists(System.String)">
+<summary>
+Prüft, ob das Verzeichnis path im Dateisystem existiert und 
+legt diesen ggf. an. Liefert true, wenn die Methode ohne
+Fehler beendet wurde.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemManipulation.SaveMailMessageObjectToFile(System.Net.Mail.MailMessage,System.String,System.Boolean)">
+<summary>Speichert ein MailMessage-Objekt in eine eml-Datei.</summary>    
+<param name="mailMessage"></param>
+<param name="fileName"></param>
+<param name="addUnsentHeader">
+True = Write the Unsent header to the file so 
+the mail client knows this mail must be presented in "New message" mode
+</param>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemNaming.GetGuidFileName(System.String,System.String)">
+<summary>
+Liefert einen zufälligen, eindeutigen Dateinamen mit der Dateiendung extension
+im Dateipfad path.
+Bsp.: GetGuidFileName("c:\","txt") -> "c:\4D9D-80C7-02AF85C822A8.txt"
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemNaming.GetGuidFileName(System.String,System.String,System.String)">
+<summary>
+Liefert einen zufälligen, eindeutigen Dateinamen mit der Dateiendung extension
+im Dateipfad path. Hinter der Guid wird suffix angehängt getrennt durch einen Unterstrich.
+Bsp.: GetGuidFileName("c:\","txt","MySuffix") -> "c:\4D9D-80C7-02AF85C822A8_MySuffix.txt"
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemNaming.GetPathFromFileName(System.String)">
+<summary>Extrahiert den Pfad aus dem Dateinamen fileName und liefert diesen zurück. </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReader.GetString(System.String)">
+<summary>
+Liefert den Inhalt der angegebenen Textdatei filename als String zurück.
+Als Encoding wird UTF8 benutzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReader.GetString(System.String,System.Text.Encoding)">
+<summary>Liefert den Inhalt der angegebenen Textdatei filename als String zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReader.GetStringArray(System.String)">
+<summary>
+Liefert den Inhalt der angegebenen Textdatei filename als String-Array zurück.
+Als Encoding wird UTF8 benutzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReader.GetStringArray(System.String,System.Text.Encoding)">
+<summary>Liefert den Inhalt der angegebenen Textdatei filename als String-Array zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReader.GetStringList(System.String)">
+<summary>
+Liefert den Inhalt der angegebenen Textdatei filename als List(of String) zurück.
+Als Encoding wird UTF8 benutzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReader.GetStringList(System.String,System.Text.Encoding)">
+<summary>Liefert den Inhalt der angegebenen Textdatei filename als List(of String) zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReplace.InvalidFileNameChars(System.String)">
+<summary>
+Entfernt alle ungültigen Zeichen aus dem Dateinamen filename
+und ersetzt sie duch "_".
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReplace.InvalidFileNameChars(System.String,System.Char)">
+<summary>
+Entfernt alle ungültigen Zeichen aus dem Dateinamen filename
+und ersetzt sie duch maskChar.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReplace.InvalidPathChars(System.String)">
+<summary>
+Entfernt alle ungültigen Zeichen aus dem Pfad path und ersetzt sie duch "_".
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IOHandling.FileSystemReplace.InvalidPathChars(System.String,System.Char)">
+<summary>
+Entfernt alle ungültigen Zeichen aus dem Pfad path und ersetzt sie duch maskChar.
+ </summary>
+</member>
+<member name="T:BCW.Foundation.Base.IOHandling.FileSystemHelper">
+<summary>Stellt Funktionalität für einen erleichterten Dateizugriff zur Verfügung</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IOHandling.FileSystemHelper.Reader">
+<summary>Stellt Funktionalität zum Lesen einer Datei bereit.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IOHandling.FileSystemHelper.Manipulation">
+<summary>Stellt Funktionalität zur Manipulations des Dateisystems zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IOHandling.FileSystemHelper.Replace">
+<summary>Stellt Ersetzungs-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IOHandling.FileSystemHelper.Checks">
+<summary>Stellt Prüfungs-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IOHandling.FileSystemHelper.Naming">
+<summary>Stellt Benamungs-Funktionalität zur Verfügung.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.NumberHandling.NumberChecks.IsNumber(System.String)">
+<summary>
+Prüft ob der Wert von s eine rationale Zahl (Ganzzahl)
+oder eine irrationale Zahl (reelle Zahl) ist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.NumberHandling.NumberChecks.IsReal(System.String)">
+<summary>Prüft ob der Wert von s eine irrationale Zahl (reelle Zahl) ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.NumberHandling.NumberChecks.IsInteger(System.String)">
+<summary>Prüft ob der Wert von s eine rationale Zahl (Ganzzahl) ist.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.NumberHandling.NumberHelper.Checks">
+<summary>Stellt Prüfungsmethoden für Zahlen bereit.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetArrayByInstance(System.Object,System.Type)">
+<summary>Liefert ein Array mit allen Attributen der Instanz context, die mit attributeType matchen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetArrayByType(System.Type,System.Type)">
+<summary>Liefert ein Array mit allen Attributen des Typs t, die mit attributeType matchen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetArrayByPropertyDescriptor(System.ComponentModel.PropertyDescriptor,System.Type)">
+<summary>
+Liefert ein Array mit allen Attributen des PropertyDescriptors pd, die mit attributeType matchen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetArrayByProperty(System.Object,System.String,System.Type)">
+<summary>
+Liefert ein Array mit allen Attributen der Eigenschaft propertyName der Instanz context,
+die mit attributeType matchen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetByType(System.Type,System.Type)">
+ <summary>
+ Liefert das Attribute vom Typ attributeType des übergebenen Typs t.
+ Wurde das Attribut nicht definiert wird Nothing zurückgegeben.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetValueByType(System.Type,System.Type,System.String)">
+<summary>
+Liefert den Wert value des übergebenen Attributtypes vom Typ t.
+Sollte das Attribut nicht definiert sein wird Nothing geliefert.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetValue(System.Attribute,System.String)">
+<summary>Liefert den Wert value des übergebenen Attributes.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetValue(System.Object,System.Type,System.String)">
+<summary>Ermittelt den Wert der Eigenschaft value des Attributes attributeType, von der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetValue(System.Object,System.String,System.Type,System.String)">
+<summary>
+Ermittelt den Wert der Eigenschaft value des Attributes vom Type attributeType,
+von der Eigenschaft propertyName, der Instanz context.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.GetValue(System.Type,System.String,System.Type,System.String)">
+<summary>
+Ermittelt den Wert der Eigenschaft value des Attributes vom Type attributeType,
+von der Eigenschaft propertyName, des Typs t.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.Get``1(System.Object,System.ComponentModel.PropertyDescriptor)">
+<summary>
+Liefert das Attribut vom Type T, der Eigenschaft propertyDescriptor, der Instanz context.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.Get``1(System.Object,System.String)">
+<summary>Liefert das Attribut vom Type T, der Eigenschaft propertyName, der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.Get(System.Object,System.ComponentModel.PropertyDescriptor,System.Type)">
+<summary>
+Liefert das Attribut vom Type attributeType, der Eigenschaft propertyDescriptor, der Instanz context.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.Get(System.Object,System.String,System.Type)">
+<summary>
+Liefert das Attribut vom Type attributeType, der Eigenschaft propertyName, der Instanz context.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.Get``1(System.Object)">
+<summary>Liefert das Attribut vom Type T, der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionAttribute.Get(System.Object,System.Type)">
+<summary>Liefert das Attribut vom Type attributeType, der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute``1(System.Object,System.String)">
+<summary>
+Prüft, ob die Eigenschaft propertyName, der Instanz context, ein Attribut vom Type T besitzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute``1(System.Object,System.ComponentModel.PropertyDescriptor)">
+<summary>
+Prüft, ob die Eigenschaft propertyName, der Instanz context, ein Attribut vom Type T besitzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute(System.Object,System.ComponentModel.PropertyDescriptor,System.Type)">
+<summary>
+Prüft, ob die Eigenschaft propertyDescriptor, der Instanz context, ein Attribut vom Type attributeType besitzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute(System.Type,System.Reflection.PropertyInfo,System.Type)">
+<summary>
+Prüft, ob die Eigenschaft propertyInfo, des Typs t, ein Attribut vom Type attributeType besitzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute(System.Object,System.String,System.Type)">
+<summary>
+Prüft, ob die Eigenschaft propertyName, der Instanz context, ein Attribut vom Type attributeType besitzt.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute(System.Type,System.Type)">
+<summary>Prüft, ob der Typ t, ein Attribut vom Type attributeType besitzt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute``1(System.Object)">
+<summary>Prüft, ob die Instanz context ein Attribut vom Type T besitzt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttribute(System.Object,System.Type)">
+<summary>Prüft, ob die Instanz  context ein Attribut vom Type attributeType besitzt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttributes(System.Object,System.String)">
+<summary>Prüft, ob die Eigenschaft propertyName der Instanz context Attribute besitzt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.ExistsAttributes(System.Object)">
+<summary>Prüft, ob die Instanz context Attribute besitzt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.IsPropertyAttribute``1(System.Object,System.String)">
+<summary>
+Prüft, ob das Attribut vom Objekt context, ein Attribut der Eigenschaft propertyName, der Klasse TObject ist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionChecks.IsPropertyAttribute``2(System.String)">
+<summary>
+Prüft, ob das Attribut vom Type TAttribute, ein Attribut der Eigenschaft propertyName, der Klasse TObject ist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionConstructor.CreateInstance(System.Type)">
+<summary>Ruft den Standard-Konstruktor des Typs type auf und liefert eine neue Instanz.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionConstructor.CreateInstance``1(System.Type,System.Object[])">
+<summary>Erzeugt eine neue Instanz der Klasse instanceType und liefert diese zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionConstructor.CreateInstance(System.Type,System.Object[])">
+<summary>Erzeugt eine neue Instanz der Klasse instanceType und liefert diese zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionConstructor.GetConstructorInfos(System.Object)">
+<summary>Liefert alle MethodInfos der Instanz context als Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionConvert.PropertyInfoToPropertyDescriptor(System.Object,System.Reflection.PropertyInfo)">
+<summary>Wandelt das PropertyInfo-Objekt pi, der Instanz context, in einen PropertyDescriptor um.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionConvert.PropertyDescriptorToPropertyInfo(System.Object,System.ComponentModel.PropertyDescriptor)">
+<summary>Wandelt den PropertyDescriptor pd, der Instanz context, in ein PropertyInfo-Objekt um.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionMethod.Execute(System.Object,System.String,System.Object[])">
+<summary>Ruft die Methode methodName des Objektes context auf.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionMethod.Execute``1(System.Object,System.String,System.Object[])">
+<summary>Ruft die Methode methodName der Instanz instance auf.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionMethod.Names(System.Object)">
+<summary>Liefert alle Methodennamen der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionMethod.GetMethodInfos(System.Object)">
+<summary>Liefert alle MethodInfos der Instanz context als Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionMethod.GetOverloadedMethodInfos(System.Object,System.String)">
+<summary>Liefert alle Methoden-Überladungen der Instanz context der Methode methodName als Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionProperty.Get(System.Object,System.String)">
+<summary>Liefert den Wert der Eigenschaft propertyName des Objektes context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionProperty.Get``1(System.Object,System.String)">
+<summary>Liefert den Wert der Eigenschaft propertyName der Objektes context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionProperty.Set(System.Object,System.String,System.Object)">
+<summary>Setzt den Wert der Eigenschaft propertyName des Objektes context auf den Wert value.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionProperty.GetAttributeOrNothing``1(System.Object,System.String)">
+<summary>
+Liefert das Attribut TAttribute, der Eigenschaft propertyName,
+der Klasse TObject und falls dieses nicht existiert, Null (Nothing).
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionProperty.GetAttributeOrNothing``2(System.String)">
+<summary>
+Liefert das Attribut TAttribute, der Eigenschaft propertyName,
+der Klasse TObject und falls dieses nicht existiert, Null (Nothing).
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionProperty.Names(System.Object)">
+ <summary>Liefert alle Eigenschaften-Namen der Instanz context als Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyDescriptor.GetArray(System.Object)">
+<summary>Liefert alle PropertyDescriptoren der Instanz context als Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyDescriptor.GetArrayByAttribute(System.Object,System.Attribute)">
+<summary>
+Liefert alle PropertyDescriptoren der Instanz context,
+welche über das angegebene Attribute verfügen, als Array.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyDescriptor.Get(System.Object,System.String)">
+<summary>Liefert einen PropertyDescriptor für die Eigenschaft propertyName, der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.GetArrayByAttribute(System.Type,System.Type)">
+<summary>
+Liefert alle PropertyInfos des Typs t, welche über ein Attribut von attributeType verfügen als Array.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.GetArrayByAttribute``1(System.Object)">
+<summary>
+ Liefert ein Array mit PropertyInfo-Objekten aller Eigenschaften des Objektes context,
+ welche über das Attribut vom Typ TAttribute verfügen.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.GetArrayByAttribute``2">
+<summary>
+ Liefert ein Array mit PropertyInfo-Objekten aller Eigenschaften der Klasse TObject,
+ welche über das Attribut vom Typ TAttribute verfügen.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.GetArray(System.Type)">
+<summary>Liefert alle PropertyInfo-Objekte des Typs t als Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.GetArray(System.Object)">
+<summary>Liefert alle PropertyInfos der Instanz context.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.Get(System.Object,System.String)">
+<summary>
+Liefert ein PropertyInfo-Objekt für die Eigenschaft propertyName, anhand des übergebenen Objektes context.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionPropertyInfo.Get``1(System.String)">
+<summary>Liefert ein PropertyInfo-Objekt für die Eigenschaft propertyName, der Klasse TObject.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionEnum.DisplayNames(System.Type)">
+<summary>
+Ermittelt alle EnumDisplayName-Attribute des übergebenen
+EnumTypes und liefert deren DisplayName-Eigenschaften oder
+den in einen String gewandelten Enum-Wert, wenn das Attribut
+nicht gesetzt wurde.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionEnum.DisplayNameToValue(System.Type,System.String)">
+<summary>Liefert den Enum-Value zum angegebenen displayName.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionEnum.ValueToDisplayName(System.Object)">
+<summary>Liefert den Displayname zum angegebenen Enum-Value.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionEnum.GetEnumValueAttribute``1(System.Object)">
+<summary>Liefert den Displaynamen zum angegebenen Enum-Value.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Property">
+<summary>Setllt Reflection-Funktionalität für Eigenschaften zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Method">
+<summary>Setllt Reflection-Funktionalität für Methoden zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Constructor">
+<summary>Setllt Reflection-Funktionalität für Methoden zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Enum">
+<summary>Setllt Reflection-Funktionalität für Enums zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Attribute">
+<summary>Setllt Reflection-Funktionalität für Attribute zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Convert">
+<summary>Setllt Reflection-Funktionalität für die Konvertierung zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.Checks">
+<summary>Setllt Reflection-Funktionalität für die Konvertierung zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.PropertyDescriptor">
+<summary>Setllt Reflection-Funktionalität für PropertyDescriptor zur Verfügung.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.ReflectionHandling.ReflectionHelper.PropertyInfo">
+<summary>Setllt Reflection-Funktionalität für ReflectionPropertyInfo zur Verfügung.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo">
+<summary>
+Stellt Funktionalitat zur Verfügung, um alle lesbaren Eigenschaften
+eines Objektes auszulesen.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.GetReadablePropertyInfoList">
+<summary>Liefert ein Liste von PropertyInfo-Objekten aller lesbaren Eigenschaften.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToNameArray">
+<summary>Liefert ein Object-Array der Eigenschaftsnamen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToValueArray">
+<summary>Liefert ein Object-Array der Eigenschaftswerte.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToValueStringArray(System.Boolean)">
+<summary>Liefert ein String-Array mit den in Strings umgewandelten Eigenschaftswerten.</summary>
+<param name="nullValueToNullString">
+Wenn true wird für Null-Werte "Null" geliefert,
+sonst ein Leerstring
+</param>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToNamesString">
+<summary>Liefert einen String der Eigenschaftsnamen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToNamesString(System.String)">
+<summary>Liefert einen String der Eigenschaftsnamen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToValuesString">
+<summary>Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToValuesString(System.String)">
+<summary>Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToNamesValuesString">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToNamesValuesString(System.String,System.String)">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten
+und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToCsvString">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ReflectionHandling.ReflectionInfo.ToCsvString(System.String,System.String,System.Boolean)">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SettingsBCW.CheckUseDevelopConnectionString">
+<summary>
+Fragt ab, ob mit Testdaten (oder Echtdaten) gearbeitet werden soll
+und liefert true (Testdaten) oder false (Echtdaten) zurück.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringChecks.IsLike(System.String,System.String)">
+ <summary>
+ Prüft, ob sourceString mit der Zeichenfolge wildcard übereinstimmt.
+ Bsp.: IsLike("Hallo", "*ll*") -> True, IsLike("Hallo", "hal*") -> True, IsLike("Hallo", "hel*") -> False
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringChecks.IsLike(System.String,System.String,System.Boolean)">
+<summary>
+Prüft, ob sourceString mit der Zeichenfolge wildcard übereinstimmt.
+Groß-/Kleinschreibung wird bei ignoreCase = true nicht berücksichtigt. 
+Bsp.: IsLike("Hallo", "*LL*", True) -> True, IsLike("Hallo", "hal*", False) -> False, IsLike("Hallo", "hel*") -> False
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringFormat.GetStringFormat(System.String,System.Object[])">
+ <summary>
+ Ersetzt die in sourceString vorhandenen Platzhalter {0}, {1} ...
+ mit den im ParamArray args angegebenen Werten.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringFunctions.Split(System.String,System.String)">
+<summary>Zerlegt den String in ein Array.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.EscapeMySql(System.String)">
+<summary>Maskiert einen String für eine MySQL-Abfrage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.EscapeMsSql(System.String)">
+<summary>Maskiert einen String für eine MsSQL-Abfrage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.EscapeAD(System.String)">
+<summary>Maskiert einen String für eine AD-Abfrage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.CommaToPoint(System.String)">
+<summary>Wandelt im String sourceString Kommata in Punkte um und liefert diesen zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.PointToComma(System.String)">
+<summary>Wandelt im String sourceString Punkte in Kommata um und liefert diesen zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.DuplicateChars(System.String,System.Char)">
+<summary>
+Entfernt aus der Zeichenkette sourceString mehrere aufeinanderfolgende Zeichen value 
+und gibt das Ergebnis zurück.
+Bsp.: ReplaceDuplicateChars("Das___ist_ein__Beispiel","_"c) -> Das_ist_ein_Beispiel
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.WhiteSpace(System.String,System.Char)">
+<summary>
+Ersetzt in der Zeichenfolge sourceString Whitespace durch das Zeichen value und liefert diese zurück.  
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.GermanChars(System.String)">
+<summary>
+Ersetzt deutsche Umlaute und ß in der Zeichenfolge sourceString (durch ae usw.)
+und liefert diese zurück.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringReplace.Replace(System.String,System.String,System.String)">
+<summary>
+Ersetzt oldString durch newString im sourceString und liefert die ersetzte Zeichenfolge zurück.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.IsEqual(System.String,System.String)">
+<summary>Liefert bei Gleichheit beider Stirngs true ansonsten false.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.Compare(System.String,System.String)">
+<summary>Vergleicht die angegebenen Strings ohne Berücksichtigung von Groß-/Kleinschreibung.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.IndexOf(System.String,System.String)">
+<summary>
+Liefert den ersten Index an welchem die Zeichenfolge value in der Zeichenfolge sourceString auftritt.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.LastIndexOf(System.String,System.String)">
+<summary>
+Liefert den letzten Index an welchem die Zeichenfolge value in der Zeichenfolge sourceString auftritt.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.Contains(System.String,System.String)">
+<summary>
+Liefert true, wenn value in der Zeichenfolge sourceString enthalten ist, ansonsten false.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.StartsWith(System.String,System.String)">
+<summary>
+Liefert true, wenn sourceString mit der Zeichenfolge value beginnt, ansonsten false.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.EndsWith(System.String,System.String)">
+<summary>
+Liefert true, wenn sourceString mit der Zeichenfolge value endet, ansonsten false.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringTextCompare.Replace(System.String,System.String,System.String)">
+<summary>
+Ersetzt oldString durch newString im sourceString und liefert die ersetzte Zeichenfolge zurück.
+Groß-/Kleinschreibung wird nicht berücksichtigung.
+</summary>
+</member>
+<member name="T:BCW.Foundation.Base.StringHandling.CultureCodes">
+ <summary>
+ Quelle: ms-help://MS.VSCC.v90/MS.MSDNQTR.v90.de/fxref_mscorlib/html/63c619e3-0969-2f01-a2d4-79d0868a98c6.htm
+ </summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.a_Default">
+ <summary>Standardsprache</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.af">
+ <summary>Afrikaans</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.af_ZA">
+ <summary>Afrikaans (Südafrika)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sq">
+ <summary>Albanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sq_AL">
+ <summary>Albanisch (Albanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar">
+ <summary>Arabisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_DZ">
+ <summary>Arabisch (Algerien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_BH">
+ <summary>Arabisch (Bahrain)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_EG">
+ <summary>Arabisch (Ägypten)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_IQ">
+ <summary>Arabisch (Irak)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_JO">
+ <summary>Arabisch (Jordanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_KW">
+ <summary>Arabisch (Kuwait)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_LB">
+ <summary>Arabisch (Libanon)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_LY">
+ <summary>Arabisch (Libyen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_MA">
+ <summary>Arabisch (Marokko)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_OM">
+ <summary>Arabisch (Oman)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_QA">
+ <summary>Arabisch (Katar)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_SA">
+ <summary>Arabisch (Saudi-Arabien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_SY">
+ <summary>Arabisch (Syrien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_TN">
+ <summary>Arabisch (Tunesien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_AE">
+ <summary>Arabisch (V.A.E.)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_YE">
+ <summary>Arabisch (Jemen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hy">
+ <summary>Armenisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hy_AM">
+ <summary>Armenisch (Armenien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.az">
+ <summary>Aserbaidschanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.az_Cyrl_AZ">
+ <summary>Aserbaidschanisch (Aserbaidschan, Kyrillisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.az_Latn_AZ">
+ <summary>Aserbaidschanisch (Aserbaidschan, Lateinisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.eu">
+ <summary>Baskisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.eu_ES">
+ <summary>Baskisch (Baskisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.be">
+ <summary>Belarussisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.be_BY">
+ <summary>Belarussisch (Belarus)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.bg">
+ <summary>Bulgarisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.bg_BG">
+ <summary>Bulgarisch (Bulgarien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ca">
+ <summary>Katalanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ca_ES">
+ <summary>Katalanisch (Katalanisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_HK">
+ <summary>Chinesisch (Hongkong S.A.R., VRC)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_MO">
+ <summary>Chinesisch (Macau SAR)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_CN">
+ <summary>Chinesisch (VRC)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_Hans">
+ <summary>Chinesisch (vereinfacht)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_SG">
+ <summary>Chinesisch (Singapur)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_TW">
+ <summary>Chinesisch (Taiwan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_Hant">
+ <summary>Chinesisch (traditionell)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hr">
+ <summary>Kroatisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hr_HR">
+ <summary>Kroatisch (Kroatien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.cs">
+ <summary>Tschechisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.cs_CZ">
+ <summary>Tschechisch (Tschechische Republik)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.da">
+ <summary>Dänisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.da_DK">
+ <summary>Dänisch (Dänemark)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.dv">
+ <summary>Divehi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.dv_MV">
+ <summary>Divehi (Malediven)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nl">
+ <summary>Niederländisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nl_BE">
+ <summary>Niederländisch (Belgien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nl_NL">
+ <summary>Niederländisch (Niederlande)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en">
+ <summary>Englisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_AU">
+ <summary>Englisch (Australien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_BZ">
+ <summary>Englisch (Belize)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_CA">
+ <summary>Englisch (Kanada)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_029">
+ <summary>Englisch (Karibik)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_IE">
+ <summary>Englisch (Irland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_JM">
+ <summary>Englisch (Jamaika)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_NZ">
+ <summary>Englisch (Neuseeland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_PH">
+ <summary>Englisch (Philippinen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_ZA">
+ <summary>Englisch (Südafrika)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_TT">
+ <summary>Englisch (Trinidad und Tobago)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_GB">
+ <summary>Englisch (Großbritannien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_US">
+ <summary>Englisch (USA)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_ZW">
+ <summary>Englisch (Simbabwe)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.et">
+ <summary>Estnisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.et_EE">
+ <summary>Estnisch (Estland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fo">
+ <summary>Färingisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fo_FO">
+ <summary>Färingisch (Färöer)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fa">
+ <summary>Farsi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fa_IR">
+ <summary>Farsi (Iran)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fi">
+ <summary>Finnisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fi_FI">
+ <summary>Finnisch (Finnland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr">
+ <summary>Französisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_BE">
+ <summary>Französisch (Belgien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_CA">
+ <summary>Französisch (Kanada)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_FR">
+ <summary>Französisch (Frankreich)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_LU">
+ <summary>Französisch (Luxemburg)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_MC">
+ <summary>Französisch (Monaco)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_CH">
+ <summary>Französisch (Schweiz)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gl">
+ <summary>Galizisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gl_ES">
+ <summary>Galizisch (Spanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ka">
+ <summary>Georgisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ka_GE">
+ <summary>Georgisch (Georgien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de">
+ <summary>Deutsch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_AT">
+ <summary>Deutsch (Österreich)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_DE">
+ <summary>Deutsch (Deutschland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_LI">
+ <summary>Deutsch (Liechtenstein)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_LU">
+ <summary>Deutsch (Luxemburg)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_CH">
+ <summary>Deutsch (Schweiz)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.el">
+ <summary>Griechisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.el_GR">
+ <summary>Griechisch (Griechenland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gu">
+ <summary>Gujarati</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gu_IN">
+ <summary>Gujarati (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.he">
+ <summary>Hebräisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.he_IL">
+ <summary>Hebräisch (Israel)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hi">
+ <summary>Hindi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hi_IN">
+ <summary>Hindi (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hu">
+ <summary>Ungarisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hu_HU">
+ <summary>Ungarisch (Ungarn)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.is">
+ <summary>Isländisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.is_IS">
+ <summary>Isländisch (Island)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.id">
+ <summary>Indonesisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.id_ID">
+ <summary>Indonesisch (Indonesien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.it">
+ <summary>Italienisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.it_IT">
+ <summary>Italienisch (Italien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.it_CH">
+ <summary>Italienisch (Schweiz)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ja">
+ <summary>Japanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ja_JP">
+ <summary>Japanisch (Japan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kn">
+ <summary>Kannada</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kn_IN">
+ <summary>Kannada (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kk">
+ <summary>Kasachisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kk_KZ">
+ <summary>Kasachisch (Kasachstan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kok">
+ <summary>Konkani</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kok_IN">
+ <summary>Konkani (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ko">
+ <summary>Koreanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ko_KR">
+ <summary>Koreanisch (Korea)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ky">
+ <summary>Kirgisisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ky_KG">
+ <summary>Kirgisisch (Kirgisistan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lv">
+ <summary>Lettisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lv_LV">
+ <summary>Lettisch (Lettland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lt">
+ <summary>Litauisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lt_LT">
+ <summary>Litauisch (Litauen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mk">
+ <summary>Mazedonisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mk_MK">
+ <summary>Mazedonisch (Mazedonien, FYROM)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ms">
+ <summary>Malaiisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ms_BN">
+ <summary>Malaiisch (Brunei Darussalam)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ms_MY">
+ <summary>Malaiisch (Malaysia)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mr">
+ <summary>Marathi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mr_IN">
+ <summary>Marathi (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mn">
+ <summary>Mongolisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mn_MN">
+ <summary>Mongolisch (Mongolei)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.no">
+ <summary>Norwegisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nb_NO">
+ <summary>Norwegisch (Bokmål, Norwegen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nn_NO">
+ <summary>Norwegisch (Nynorsk, Norwegen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pl">
+ <summary>Polnisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pl_PL">
+ <summary>Polnisch (Polen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pt">
+ <summary>Portugiesisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pt_BR">
+ <summary>Portugiesisch (Brasilien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pt_PT">
+ <summary>Portugiesisch (Portugal)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pa">
+ <summary>Punjabi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pa_IN">
+ <summary>Punjabi (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ro">
+ <summary>Rumänisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ro_RO">
+ <summary>Rumänisch (Rumänien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ru">
+ <summary>Russisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ru_RU">
+ <summary>Russisch (Russland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sa">
+ <summary>Sanskrit</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sa_IN">
+ <summary>Sanskrit (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sr_Cyrl_CS">
+ <summary>Serbisch (Serbien, Kyrillisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sr_Latn_CS">
+ <summary>Serbisch (Serbien, Lateinisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sk">
+ <summary>Slowakisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sk_SK">
+ <summary>Slowakisch (Slowakei)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sl">
+ <summary>Slowenisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sl_SI">
+ <summary>Slowenisch (Slowenien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es">
+ <summary>Spanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_AR">
+ <summary>Spanisch (Argentinien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_BO">
+ <summary>Spanisch (Bolivien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_CL">
+ <summary>Spanisch (Chile)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_CO">
+ <summary>Spanisch (Kolumbien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_CR">
+ <summary>Spanisch (Costa Rica)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_DO">
+ <summary>Spanisch (Dominikanische Republik)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_EC">
+ <summary>Spanisch (Ecuador)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_SV">
+ <summary>Spanisch (El Salvador)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_GT">
+ <summary>Spanisch (Guatemala)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_HN">
+ <summary>Spanisch (Honduras)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_MX">
+ <summary>Spanisch (Mexiko)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_NI">
+ <summary>Spanisch (Nicaragua)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PA">
+ <summary>Spanisch (Panama)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PY">
+ <summary>Spanisch (Paraguay)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PE">
+ <summary>Spanisch (Peru)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PR">
+ <summary>Spanisch (Puerto Rico)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_ES">
+ <summary>Spanisch (Spanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_ES_tradnl">
+ <summary>Spanisch (Spanien, herkömmliche Sortierreihenfolge)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_UY">
+ <summary>Spanisch (Uruguay)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_VE">
+ <summary>Spanisch (Venezuela)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sw">
+ <summary>Swahili</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sw_KE">
+ <summary>Swahili (Kenia)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sv">
+ <summary>Schwedisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sv_FI">
+ <summary>Schwedisch (Finnland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sv_SE">
+ <summary>Schwedisch (Schweden)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.syr">
+ <summary>Syrisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.syr_SY">
+ <summary>Syrisch (Syrien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ta">
+ <summary>Tamil</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ta_IN">
+ <summary>Tamil (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tt">
+ <summary>Tatarisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tt_RU">
+ <summary>Tatarisch (Russland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.te">
+ <summary>Telugu</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.te_IN">
+ <summary>Telugu (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.th">
+ <summary>Thai</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.th_TH">
+ <summary>Thai (Thailand)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tr">
+ <summary>Türkisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tr_TR">
+ <summary>Türkisch (Türkei)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uk">
+ <summary>Ukrainisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uk_UA">
+ <summary>Ukrainisch (Ukraine)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ur">
+ <summary>Urdu</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ur_PK">
+ <summary>Urdu (Pakistan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uz">
+ <summary>Usbekisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uz_Cyrl_UZ">
+ <summary>Usbekisch (Usbekistan, Kyrillisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uz_Latn_UZ">
+ <summary>Usbekisch (Usbekistan, Lateinisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.vi">
+ <summary>Vietnamesisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.vi_VN">
+ <summary>Vietnamesisch (Vietnam)</summary>
+</member>
+<member name="P:BCW.Foundation.Base.StringHandling.StringHelper.TextCompare">
+<summary>
+Stellt Text-Vergleichsfunktionen zur Verfügung. 
+Die Funktionen arbeiten nicht binär und ignorieren Groß-/Kleinschreibung.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.StringHandling.StringHelper.Replace">
+<summary>Stellt Ersetzungs-Funktionalität zur Verfügung.'''</summary> 
+</member>
+<member name="P:BCW.Foundation.Base.StringHandling.StringHelper.Format">
+<summary>Stellt Formatierungs-Funktionalität zur Verfügung.'''</summary> 
+</member>
+<member name="P:BCW.Foundation.Base.StringHandling.StringHelper.Checks">
+<summary>Stellt Prüfungs-Funktionalität zur Verfügung.'''</summary> 
+</member>
+<member name="P:BCW.Foundation.Base.StringHandling.StringHelper.Functions">
+<summary>Stellt allgemeine String-Funktionalität zur Verfügung.'''</summary> 
+</member>
+<member name="M:BCW.Foundation.Base.EnumHandling.EnumMethods.GetEnumValuesFromFlaggedEnumValue``1(System.Int32)">
+<summary>
+Liefert ein Array mit den einzelnen Enum-Werte eines aus mehreren Enum-Werten 
+bestehenden Enum-Wertes, wenn die Enumeration mit dem Flag-Attribut
+versehen wurde. 
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.UniversalDrawing.ImageMethods.GetImageSize(System.Byte[])">
+<summary>Liefert anhand des übergebenen Byte-Arrays die Breite und Höhe eines Bildes.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.UniversalDrawing.ImageMethods.GetImageSize(System.String)">
+<summary>Liefert anhand des übergebenen Filenames die Breite und Höhe eines Bildes.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.UniversalDrawing.ImageMethods.GetImageSize(System.IO.Stream)">
+<summary>Liefert anhand des übergebenen Streams die Breite und Höhe eines Bildes.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.UniversalDrawing.ImageSize.Width">
+<summary>Liefert die Breite des Bildes.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.UniversalDrawing.ImageSize.Height">
+<summary>Liefert die Höhe des Bildes.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.UniversalDrawing.ImageSizeInfo.ImageSize">
+<summary>Liefert Breite und Höhe des Bildes.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.UniversalDrawing.ImageSizeInfo.Found">
+<summary>Liefert true, wenn Breite und Höhe des Bildes gefunden werden konnte.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerInfo.IsEqual(BCW.Foundation.Base.Events.EventHandlerInfo)">
+<summary>
+Liefert true, wenn die Werte der Eigenschaften von eventHandlerInfo
+den Werten der Instanz-Eigenschaften entsprechen.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Events.EventHandlerManager.CallbackObjectCount">
+<summary>Liefert die Anzahl der unterschiedlichen verwalteten Callback-Objekte</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerManager.EventHandlerCount(System.Object)">
+<summary>
+Liefert die Anzahl der verwalteten Callback-Methoden
+zum angegebenen callbackObject.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerManager.AddEventHandler(BCW.Foundation.Base.Events.EventHandlerInfo)">
+<summary>Legt einen Eventhandler, zur angegebenen eventHandlerInfo, an.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerManager.AddEventHandler(System.Object,System.String,System.Object,System.String)">
+<summary>Legt einen Eventhandler, zu den angegebenen Parametern, an.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerManager.RemoveEventHandler(BCW.Foundation.Base.Events.EventHandlerInfo)">
+<summary>Entfernt den Eventhandler zur angegebenen eventHandlerInfo.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerManager.RemoveEventHandler(System.Object,System.String,System.Object,System.String)">
+<summary>Entfernt den Eventhandler zu den angegebenen Parametern.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Events.EventHandlerManager.RemoveAtCallbackObjectDispose(System.Object)">
+<summary>Entfernt alle EventHandler zum angegebenen CallBack-Objekt.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.FileLogger.Log(System.String,System.String)">
+<summary>Schreibt einen Eintrag message in die angegebene Log-Datei filename.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.FileLogger.Log(System.String)">
+<summary>Schreibt einen Eintrag message in die Standard-Log-Datei DefaultLogFileName. </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.FileLogger.ClearLogFile(System.String)">
+<summary>Leert die Log-Datei filename.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.FileLogger.ClearLogFile">
+<summary>Leert die Standard-Log-Datei DefaultLogFileName.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Logging.EventLogWriter.EventLogName">
+ <summary>
+ Liefert den EventLogName oder legt diesen fest.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.Logging.EventLogWriter.EventLogSource">
+ <summary>
+ Liefert die EventLogSource oder legt diese fest.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String,System.Diagnostics.EventLogEntryType)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String,System.Int32)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String,System.Diagnostics.EventLogEntryType,System.Int32)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="T:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue">
+<summary>
+	Public Sub New(ByVal name As String)
+
+	MessageQueue.Instance.AddSubscriber(Of CommonSystemMessage) _
+	(Me, AddressOf OnCommonSystemMessageArrived)
+End Sub
+
+Private Sub OnCommonSystemMessageArrived(ByVal message As ISystemMessage)
+		Console.WriteLine(message.MessageName)
+End Sub
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.AddSubscriber``1(System.Object,System.Action{BCW.Foundation.Base.SystemMessaging.Interfaces.ISystemMessage})">
+<summary>
+Fügt den Beobachter subscriber der SystemMessage TMessage hinzu 
+und legt die CallBack-Methode messageArrivedAction fest.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.RemoveSubscriber``1(System.Object)">
+<summary>Entfernt den Beobachter subscriber der SystemMessage TMessage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.SendSystemMessage(BCW.Foundation.Base.SystemMessaging.Interfaces.ISystemMessage)">
+<summary>Wirft die SystemMessage message und ruft die CallBack-Methode der Beobachter auf.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.GetAddedMessageTypes">
+<summary>Liefert eine Collection der registrierten SystemMessage-Typen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.GetAddedSubscribers``1">
+<summary>Liefert eine Colection aller Beobachter der SystemMessage TMessage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ErrorHandling.ErrorManager.WriteExceptionToEventLog(System.Exception)">
+ <summary>
+ Schreibt ExceptionMessage und Stacktrace ins EventLog.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ErrorHandling.ErrorManager.GetStackTraceInfoListString(System.Exception)">
+<summary>Liefert ExceptionMessage und Stacktrace.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ErrorHandling.ErrorManager.GetStackTraceInfoList(System.Exception)">
+<summary>Liefert eine StaceTraceInfoList.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.CryptHelper.GetNtHash(System.String)">
+<summary>Liefert den (MD4) NT-Hash von s.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.CryptHelper.EncryptString(System.String)">
+<summary>Verschlüsselt einen Wert.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.CryptHelper.DecryptString(System.String)">
+<summary>Entschlüsselt einen zuvor mit EncryptString verschlüsselten Wert.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash">
+ <summary>
+ Copyright (c) 2000 Oren Novotny (osn@po.cwru.edu)
+ Permission is granted to use this code for anything.
+ Derived from the RSA Data Security, Inc. MD4 Message-Digest Algorithm. 
+ http://www.rsasecurity.com">RSA Data Security, Inc. requires 
+ attribution for any work that is derived from the MD4 Message-Digest 
+ Algorithm; for details see http://www.roxen.com/rfc/rfc1320.html.
+ This code is ported from Norbert Hranitzky'''s 
+ (norbert.hranitzky@mchp.siemens.de)
+ Java version.
+ Copyright (c) 2008 Luca Mauri (http://www.lucamauri.com)
+ The orginal version found at http://www.derkeiler.com/Newsgroups/microsoft.public.dotnet.security/2004-08/0004.html
+ was not working. I corrected and modified it so the current version is
+ now calculating proper MD4 checksum.
+ Implements the MD4 message digest algorithm in VB.Net
+ Ronald L. Rivest,
+ http://www.roxen.com/rfc/rfc1320.html
+ The MD4 Message-Digest Algorithm
+ IETF RFC-1320 (informational).
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineReset">
+ <summary>
+ Resets this object disregarding any temporary data present at the
+ time of the invocation of this call.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineUpdate(System.Byte)">
+ <summary>
+ Continues an MD4 message digest using the input byte 
+ </summary>
+ <param name="b">byte to input</param>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineUpdate(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ MD4 block update operation
+ Continues an MD4 message digest operation by filling the buffer, 
+ transform(ing) data in 512-bit message block(s), updating the variables
+ context and count, and leaving (buffering) the remaining bytes in buffer
+ for the next update or finish.
+ </summary>
+ <param name="input">input block</param>
+ <param name="offset">start of meaningful bytes in input</param>
+ <param name="len">count of bytes in input blcok to consider</param>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineDigest">
+ <summary>
+ Completes the hash computation by performing final operations 
+ such as padding.  At the return of this engineDigest, the MD 
+ engine is reset.
+ </summary>
+ <returns>returns the array of bytes for the resulting hash value.</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.Transform(System.Byte[]@,System.Int32)">
+ <summary>
+ MD4 basic transformation
+ Transforms context based on 512 bits from input block starting
+ from the offset'th byte.
+ </summary>
+ <param name="block">input sub-array</param>
+ <param name="offset">starting position of sub-array</param>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetByteHashFromString(System.String)">
+ <summary>Returns a byte hash from a string</summary>
+ <param name="s">string to hash</param>
+ <returns>returns byte-array that contains the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetByteHashFromBytes(System.Byte[])">
+ <summary>Returns a binary hash from an input byte array</summary>
+ <param name="b">byte-array to hash</param>
+ <returns>returns binary hash of input</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetHexHashFromBytes(System.Byte[])">
+ <summary>Returns a string that contains the hexadecimal hash</summary>
+ <param name="b">byte-array to input</param>
+ <returns>returns String that contains the hex of the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetByteHashFromByte(System.Byte)">
+ <summary>Returns a byte hash from the input byte</summary>
+ <param name="b">byte to hash</param>
+ <returns>returns binary hash of the input byte</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetHexHashFromByte(System.Byte)">
+ <summary>Returns a string that contains the hexadecimal hash</summary>
+ <param name="b">byte to hash</param>
+ <returns>returns String that contains the hex of the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetHexHashFromString(System.String)">
+ <summary>Returns a string that contains the hexadecimal hash</summary>
+ <param name="s">string to hash</param>
+ <returns>returns String that contains the hex of the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.ToString">
+ <summary>
+ Generiert einen Usernamen anhand der vorgenommenen eingestellten Eigenschaften.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.ReplaceSpecialCharacters(System.String)">
+ <summary>
+ Tauscht Sonderzeichen durch 7-Bit-Zeichen aus.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.Generate">
+ <summary>
+ Generiert einen Usernamen anhand der vorgenommenen eingestellten Eigenschaften.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.GenerateAllFormats">
+ <summary>
+ Generiert für jedes UserName-Format einen Username und gibt diese als Array zurück.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.GenerateUserNameAllFormats(BCW.Foundation.Base.Generators.UserNameGenerator)">
+ <summary>
+ Generiert für jedes UserName-Format einen Username und gibt diese als Array zurück.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.Sections">
+<summary>Auflistung aller Sektionen.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.DefaultCommentChar">
+<summary>Legt das Standard-Kommentarzeichen fest oder gibt dieses zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.ToString">
+<summary>liefert die momentane Ini-Datei als String zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.ParseIni">
+<summary>
+Parsed die angegebene Ini-Datei oder Ini-String und stellt die Daten über den iniParser zur Verfügung.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.SetValue(System.String,System.String,System.String)">
+<summary>Setzt den Wert eines Schlüssels.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RemoveValue(System.String,System.String)">
+<summary>Löscht einen Schlüssel einer Sektion.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RemoveSection(System.String)">
+<summary>Löscht eine Sektion.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.AddValue(System.String,System.String,System.String)">
+<summary>Fügt einer Sektion einen Schlüssel hinzu.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.AddSection(System.String)">
+<summary>Fügt eine neue Sektion hinzu.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RenameValue(System.String,System.String,System.String)">
+<summary>Benennt einer Schlüssel einer Sektion um.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RenameSection(System.String,System.String)">
+<summary>Benennt eine Sektion um.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.Save">
+<summary>Speichert alle Änderungen in die, im Konstruktor, angegebene Ini-Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.Save(System.String)">
+ <summary>
+ Speichert alle Änderungen in die angegebene Ini-Datei.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.GetSection(System.String)">
+<summary>Gibt die angegebene Sektion zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.GetValue(System.String,System.String)">
+<summary>Gibt den angegebenen Schlüssel aus der Sektion zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.ExistValue(System.String,System.String)">
+<summary>
+Prüft ob valueName in der Sektion sectionName vorhanden ist.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.GetValueOrEmpty(System.String,System.String)">
+<summary>
+Gibt den angegebenen Schlüssel aus der Sektion zurück, sollte dieser nicht 
+vorhanden sein wird ein SectionValue-Objekt mit dem Wert "" geliefert.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.GetSectionComments(System.String)">
+<summary>Gibt die Kommentare einer Sektion zurück.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.GetValueComments(System.String,System.String)">
+<summary>Gibt die Kommentare des angegebenen Schlüssels einer Sektion zurück.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.SectionValue.ValueOnly">
+<summary>Gibt an, ob nur ein Wert existiert.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.Ok">
+<summary>Zeigt eine OK-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.OkCancel">
+<summary>Zeigt eine OK- und Abbrechen-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.AbortRetryIgnore">
+<summary></summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.YesNoCancel">
+<summary>Zeigt eine Ja-, Nein- und Abbrechen-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.YesNo">
+<summary>Zeigt eine Ja- und Nein-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.RetryCancel">
+<summary>Zeigt eine Wiederholen- und Abbrechen-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.CancelTryContinue">
+<summary></summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons.YesButton">
+<summary>Legt Ja-Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons.NoButton">
+<summary>Legt Nein-Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Ok">
+<summary>OK wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Cancel">
+<summary>Abbrechen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Retry">
+<summary>Wiederholen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Ignore">
+<summary>Ignorieren wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Yes">
+<summary>Ja wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.No">
+<summary>Nein wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Close">
+<summary>Schließen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Help">
+<summary>Hilfe wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.TryAgain">
+<summary>Neu versuchen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Continue">
+<summary>Weiter wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Timeout">
+<summary>Es ist ein TImeout aufgetreten.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiOptions.TaskModal">
+<summary>Zeigt die MessageBox für den ausführenden Task modal an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.None">
+<summary>Zeigt kein Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Question">
+<summary>Zeigt ein Fragezeichen-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Exclamation">
+<summary>Zeigt ein Ausrufezeichen-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Information">
+<summary>Zeigt ein Informations-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Error">
+<summary>Zeigt ein Fehler-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button1">
+<summary>Legt die erste Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button2">
+<summary>Legt die zweite Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button3">
+<summary>Legt die dritte Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button4">
+<summary>Legt die vierte Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String,System.String)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Information(System.String)">
+<summary>Zeigt eine Informations-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Information(System.String,System.String)">
+<summary>Zeigt eine Informations-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Exclamation(System.String)">
+<summary>Zeigt eine Warnungs-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Exclamation(System.String,System.String)">
+<summary>Zeigt eine Warnungs-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String)">
+<summary>Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.String)">
+<summary>Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.Exception)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird die Message-Eigenschaft des übergebenen Exception-Objektes angezeigt
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.Exception)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird die Message-Eigenschaft des übergebenen Exception-Objektes angezeigt
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.String,System.Exception)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird die Message-Eigenschaft des übergebenen Exception-Objektes angezeigt
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.Exception,System.Boolean)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird der Stacktrace des übergebenen Exception-Objektes angezeigt,
+wenn showStackTrace den Wert true aufweist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.Exception,System.Boolean)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird der Stacktrace des übergebenen Exception-Objektes angezeigt,
+wenn showStackTrace den Wert true aufweist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.String,System.Exception,System.Boolean)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird der Stacktrace des übergebenen Exception-Objektes angezeigt,
+wenn showStackTrace den Wert true aufweist.
+</summary>
+</member>
+<member name="T:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1">
+<summary>
+Für die Verwendung dieses Serialisierers muss die zu 
+serialisierende Klasse mit dem Serializable-Attribut 
+gekennzeichnet werden
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="T:BCW.Foundation.Base.Serialization.Serializers.Binary">
+<summary>
+Für die Verwendung dieses Serialisierers muss die zu 
+serialisierende Klasse mit dem Serializable-Attribut 
+gekennzeichnet werden
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.dom">
+<summary>Indicate a domestic delivery address.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.intl">
+<summary>Indicate an international delivery address.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.postal">
+<summary>Indicate a postal delivery address.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.parcel">
+<summary>Indicate a parcel delivery address.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.home">
+<summary>Indicate a delivery address for a residence.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.work">
+<summary>Indicate delivery address for a place of work.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardAddressTypes.pref">
+<summary>Indicate the preferred delivery address.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardMailTypes.internet">
+<summary>Indicate an Internet addressing type.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardMailTypes.x400">
+<summary>Indicate a X.400 addressing type.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardMailTypes.pref">
+<summary>Indicate a preferred-use email address when more than one is specified.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.home">
+<summary>Indicate a telephone number associated with a residence.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.msg">
+<summary>Indicate the telephone number has voice messaging support.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.work">
+<summary>Indicate a telephone number associated with a place of work.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.pref">
+<summary>Indicate a preferred-use telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.voice">
+<summary>Indicate a voice telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.fax">
+<summary>Indicate a facsimile telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.cell">
+<summary>Indicate a cellular telephone number</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.video">
+<summary>Indicate a video conferencing telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.pager">
+<summary>Indicate a paging device telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.bbs">
+<summary>Indicate a bulletin board system telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.modem">
+<summary>Indicate a MODEM connected telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.car">
+<summary>Indicate a car-phone telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.isdn">
+<summary>Indicate an ISDN service telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardPhoneNumberTypes.pcs">
+<summary>Indicate a personal communication services telephone number.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardUrlTypes.Home">
+<summary>Indicate a Url number associated with a residence.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.vCardBuilder.Enums.vCardUrlTypes.Work">
+<summary>Indicate a Url associated with a place of work.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCard">
+ <summary>
+ Specifies an Internet standards track protocol for the
+ Internet community, and requests discussion and suggestions for
+ improvements.  Please refer to the current edition of the "Internet
+ Official Protocol Standards" (STD 1) for the standardization state
+ and status of this protocol.  Distribution of this memo is unlimited.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.CommonName">
+ <summary>Registration of text/directory MIME type FN.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.FullName">
+ <summary>Registration of text/directory MIME type FN.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Nicknames">
+ <summary>Specify the text corresponding to the nickname of the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Photo">
+ <summary>Registration of text/directory MIME type PHOTO.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.BirthDay">
+<summary>Registration of text/directory MIME type BDAY.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Addresses">
+ <summary>Specify the electronic mail address for communication with the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.AddressLabel(BCW.Foundation.Base.vCardBuilder.vCardAddress)">
+ <summary>
+ Specify the formatted text corresponding to delivery
+ address of the object the vCard represents.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.PhoneNumbers">
+ <summary>Specify the telephone number for telephony communication with the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.MailAddresses">
+<summary>Specify the electronic mail address for communication with the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Mailer">
+ <summary>Specify the type of electronic mail software that is used by the individual associated with the vCard.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Title">
+ <summary>Specify the job title, functional position or function of the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Role">
+ <summary>Specify information concerning the role, occupation, or business category of the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Logo">
+ <summary>Specify a graphic image of a logo associated with the object the vCard represents.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Organization">
+ <summary>Specify the organizational name and units associated with the vCard.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Categories">
+ <summary>Specify application category information about the vCard.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Note">
+ <summary>Specify supplemental information or a comment that is associated with the vCard.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.ProdId">
+ <summary>Specify the identifier for the product that created the vCard object.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Revision">
+ <summary>Specify revision information about the current.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.SortString">
+ <summary>specify the family name or given name text to be used for national-language-specific sorting of the FN and N types.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Uid">
+ <summary>Specify a value that represents a globally unique identifier corresponding to the individual or resource associated with the vCard.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Urls">
+ <summary>Specify a uniform resource locator associated with the object that the vCard refers to.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.Version">
+ <summary>specify the version of the vCard specification used to format this vCard.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCard.InstantMessengerAddress">
+ <summary>Specify the Instant Messenger Address used by the vCard owner.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.vCardBuilder.vCard.Save(System.String)">
+<summary>Save the vCard.</summary>
+ <param name="fileName">The name of the save file.</param>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardAddress">
+<summary>Specify the components of the delivery address for the vCard object.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardAddress.ExtendedAddress">
+<summary>Anschriftenzusatz.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardAddress.Street">
+<summary>Straße der Anschrift.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardAddress.Locality">
+<summary>Stadt der Anschrift.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardAddress.Region">
+<summary>Kanton oder Bundesland.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardAddress.PostalCode">
+<summary>PLZ der Anschrift.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardAddress.CountryName">
+<summary>Land der Anschrift.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardFullName">
+<summary>Specify the formatted text corresponding to the name of the object the vCard represents.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardImage">
+<summary>Specify an image or photograph information.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardImage.Url">
+<summary>Url des Bildes.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.vCardBuilder.vCardImage.Url(BCW.Foundation.Base.vCardBuilder.Enums.vCardImageLinkTypes)">
+<summary>Url des Bildes.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardMaillAddress">
+<summary>Specify the electronic mail address for communication with the object the vCard represents.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardOrganization">
+ <summary>Specify the organizational name and units associated with the vCard.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardPhoneNumber">
+<summary>Specify the telephone number for telephony communication with the object the vCard represents.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.vCardBuilder.vCardUrl">
+<summary>Specify a uniform resource locator associated with the object that the vCard refers to.</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,1580 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Base
+</name>
+</assembly>
+<members>
+<member name="M:BCW.Foundation.Base.ErrorHandling.ErrorManager.WriteExceptionToEventLog(System.Exception)">
+ <summary>
+ Schreibt ExceptionMessage und Stacktrace ins EventLog.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.ErrorHandling.ErrorManager.GetStackTraceInfoListString(System.Exception)">
+<summary>Liefert ExceptionMessage und Stacktrace.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.ErrorHandling.ErrorManager.GetStackTraceInfoList(System.Exception)">
+<summary>Liefert eine StaceTraceInfoList.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.CryptCommands.GetNtHash(System.String)">
+<summary>Liefert den (MD4) NT-Hash von s.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.CryptCommands.EncryptString(System.String)">
+<summary>Verschlüsselt einen Wert.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.CryptCommands.DecryptString(System.String)">
+<summary>Entschlüsselt einen zuvor mit EncryptString verschlüsselten Wert.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash">
+ <summary>
+ Copyright (c) 2000 Oren Novotny (osn@po.cwru.edu)
+ Permission is granted to use this code for anything.
+ Derived from the RSA Data Security, Inc. MD4 Message-Digest Algorithm. 
+ http://www.rsasecurity.com">RSA Data Security, Inc. requires 
+ attribution for any work that is derived from the MD4 Message-Digest 
+ Algorithm; for details see http://www.roxen.com/rfc/rfc1320.html.
+ This code is ported from Norbert Hranitzky'''s 
+ (norbert.hranitzky@mchp.siemens.de)
+ Java version.
+ Copyright (c) 2008 Luca Mauri (http://www.lucamauri.com)
+ The orginal version found at http://www.derkeiler.com/Newsgroups/microsoft.public.dotnet.security/2004-08/0004.html
+ was not working. I corrected and modified it so the current version is
+ now calculating proper MD4 checksum.
+ Implements the MD4 message digest algorithm in VB.Net
+ Ronald L. Rivest,
+ http://www.roxen.com/rfc/rfc1320.html
+ The MD4 Message-Digest Algorithm
+ IETF RFC-1320 (informational).
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineReset">
+ <summary>
+ Resets this object disregarding any temporary data present at the
+ time of the invocation of this call.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineUpdate(System.Byte)">
+ <summary>
+ Continues an MD4 message digest using the input byte 
+ </summary>
+ <param name="b">byte to input</param>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineUpdate(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ MD4 block update operation
+ Continues an MD4 message digest operation by filling the buffer, 
+ transform(ing) data in 512-bit message block(s), updating the variables
+ context and count, and leaving (buffering) the remaining bytes in buffer
+ for the next update or finish.
+ </summary>
+ <param name="input">input block</param>
+ <param name="offset">start of meaningful bytes in input</param>
+ <param name="len">count of bytes in input blcok to consider</param>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.EngineDigest">
+ <summary>
+ Completes the hash computation by performing final operations 
+ such as padding.  At the return of this engineDigest, the MD 
+ engine is reset.
+ </summary>
+ <returns>returns the array of bytes for the resulting hash value.</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.Transform(System.Byte[]@,System.Int32)">
+ <summary>
+ MD4 basic transformation
+ Transforms context based on 512 bits from input block starting
+ from the offset'th byte.
+ </summary>
+ <param name="block">input sub-array</param>
+ <param name="offset">starting position of sub-array</param>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetByteHashFromString(System.String)">
+ <summary>Returns a byte hash from a string</summary>
+ <param name="s">string to hash</param>
+ <returns>returns byte-array that contains the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetByteHashFromBytes(System.Byte[])">
+ <summary>Returns a binary hash from an input byte array</summary>
+ <param name="b">byte-array to hash</param>
+ <returns>returns binary hash of input</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetHexHashFromBytes(System.Byte[])">
+ <summary>Returns a string that contains the hexadecimal hash</summary>
+ <param name="b">byte-array to input</param>
+ <returns>returns String that contains the hex of the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetByteHashFromByte(System.Byte)">
+ <summary>Returns a byte hash from the input byte</summary>
+ <param name="b">byte to hash</param>
+ <returns>returns binary hash of the input byte</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetHexHashFromByte(System.Byte)">
+ <summary>Returns a string that contains the hexadecimal hash</summary>
+ <param name="b">byte to hash</param>
+ <returns>returns String that contains the hex of the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.Cryptography.Hashes.MD4Hash.GetHexHashFromString(System.String)">
+ <summary>Returns a string that contains the hexadecimal hash</summary>
+ <param name="s">string to hash</param>
+ <returns>returns String that contains the hex of the hash</returns>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetIsIn``1(``0,System.Collections.Generic.IEnumerable{``0},System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetIsNumeric(System.String)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetAllMembersIn``1(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetIntersection(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetDifferenceQuantity(System.Collections.IEnumerable,System.Collections.IEnumerable,System.Boolean)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetListOf``1(System.Collections.IEnumerable)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.Common.GetArrayOf``1(System.Collections.IEnumerable)">
+<summary></summary>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.EnumerableCharExtensions.DifferenceQuantity``1(``0,System.Boolean,System.Collections.Generic.IEnumerable{System.Char})">
+ <summary>
+ Liefert die Differenzmenge.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="v"></param>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.EnumerableExtensions.DifferenceQuantity``1(``0,System.Collections.IEnumerable)">
+ <summary>
+ Liefert die Differenzmenge.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="v"></param>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.ExtensionMethods.EnumerableStringExtensions.DifferenceQuantity``1(``0,System.Boolean,System.Collections.Generic.IEnumerable{System.String})">
+ <summary>
+ Liefert die Differenzmenge.
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="v"></param>
+ <param name="values"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.ToString">
+ <summary>
+ Generiert einen Usernamen anhand der vorgenommenen eingestellten Eigenschaften.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.ReplaceSpecialCharacters(System.String)">
+ <summary>
+ Tauscht Sonderzeichen durch 7-Bit-Zeichen aus.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.Generate">
+ <summary>
+ Generiert einen Usernamen anhand der vorgenommenen eingestellten Eigenschaften.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.GenerateAllFormats">
+ <summary>
+ Generiert für jedes UserName-Format einen Username und gibt diese als Array zurück.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Generators.UserNameGenerator.GenerateUserNameAllFormats(BCW.Foundation.Base.Generators.UserNameGenerator)">
+ <summary>
+ Generiert für jedes UserName-Format einen Username und gibt diese als Array zurück.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.Sections">
+ <summary>
+ Auflistung aller Sektionen.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.DefaultCommentChar">
+ <summary>
+ Legt das Standard-Kommentarzeichen fest oder gibt dieses zurück.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.GetSection(System.String)">
+ <summary>
+ Gibt die angegebene Sektion zurück.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.GetValue(System.String,System.String)">
+ <summary>
+ Gibt den angegebenen Schlüssel aus der Sektion zurück.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.GetValueOrEmpty(System.String,System.String)">
+ <summary>
+ Gibt den angegebenen Schlüssel aus der Sektion zurück, sollte dieser nicht vorhanden sein wird ein SectionValue-Objekt mit dem Wert "" geliefert.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.GetSectionComments(System.String)">
+ <summary>
+ Gibt die Kommentare einer Sektion zurück.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.IniParser.GetValueComments(System.String,System.String)">
+ <summary>
+ Gibt die Kommentare des angegebenen Schlüssels einer Sektion zurück.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.ToString">
+ <summary>
+ liefert die momentane Ini-Datei als String zurück.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.ParseIni">
+ <summary>
+ Parsed die angegebene Ini-Datei oder Ini-String und stellt die Daten über den iniParser zur Verfügung.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.SetValue(System.String,System.String,System.String)">
+ <summary>
+ Setzt den Wert eines Schlüssels.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RemoveValue(System.String,System.String)">
+ <summary>
+ Löscht einen Schlüssel einer Sektion.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RemoveSection(System.String)">
+ <summary>
+ Löscht eine Sektion.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.AddValue(System.String,System.String,System.String)">
+ <summary>
+ Fügt einer Sektion einen Schlüssel hinzu.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.AddSection(System.String)">
+ <summary>
+ Fügt eine neue Sektion hinzu
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RenameValue(System.String,System.String,System.String)">
+ <summary>
+ Benennt einer Schlüssel einer Sektion um.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.RenameSection(System.String,System.String)">
+ <summary>
+ Benennt eine Sektion um.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.Save">
+ <summary>
+ Speichert alle Änderungen in die, im Konstruktor, angegebene Ini-Datei.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.IniHandling.IniParser.Save(System.String)">
+ <summary>
+ Speichert alle Änderungen in die angegebene Ini-Datei.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.IniHandling.SectionValue.ValueOnly">
+ <summary>
+ Gibt an, ob nur ein Wert existiert.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.Logging.EventLogWriter.EventLogName">
+ <summary>
+ Liefert den EventLogName oder legt diesen fest.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.Logging.EventLogWriter.EventLogSource">
+ <summary>
+ Liefert die EventLogSource oder legt diese fest.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String,System.Diagnostics.EventLogEntryType)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String,System.Int32)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Logging.EventLogWriter.WriteToEventLog(System.String,System.Diagnostics.EventLogEntryType,System.Int32)">
+ <summary>
+ Schreibt message ins Ereignisprotokoll.
+ </summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.Ok">
+<summary>Zeigt eine OK-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.OkCancel">
+<summary>Zeigt eine OK- und Abbrechen-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.AbortRetryIgnore">
+<summary></summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.YesNoCancel">
+<summary>Zeigt eine Ja-, Nein- und Abbrechen-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.YesNo">
+<summary>Zeigt eine Ja- und Nein-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.RetryCancel">
+<summary>Zeigt eine Wiederholen- und Abbrechen-Schaltfläche in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons.CancelTryContinue">
+<summary></summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons.YesButton">
+<summary>Legt Ja-Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons.NoButton">
+<summary>Legt Nein-Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Ok">
+<summary>OK wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Cancel">
+<summary>Abbrechen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Retry">
+<summary>Wiederholen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Ignore">
+<summary>Ignorieren wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Yes">
+<summary>Ja wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.No">
+<summary>Nein wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Close">
+<summary>Schließen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Help">
+<summary>Hilfe wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.TryAgain">
+<summary>Neu versuchen wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Continue">
+<summary>Weiter wurde geklickt.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiResults.Timeout">
+<summary>Es ist ein TImeout aufgetreten.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiOptions.TaskModal">
+<summary>Zeigt die MessageBox für den ausführenden Task modal an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.None">
+<summary>Zeigt kein Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Question">
+<summary>Zeigt ein Fragezeichen-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Exclamation">
+<summary>Zeigt ein Ausrufezeichen-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Information">
+<summary>Zeigt ein Informations-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons.Error">
+<summary>Zeigt ein Fehler-Icon in der MessageBox an.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button1">
+<summary>Legt die erste Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button2">
+<summary>Legt die zweite Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button3">
+<summary>Legt die dritte Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="F:BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons.Button4">
+<summary>Legt die vierte Schaltfläche als Standard-Schaltfläche fest.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiDefaultButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiButtons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,System.String)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiIcons)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Message(System.String)">
+<summary>Zeigt eine benutzerdefinierte MessageBox.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String,System.String)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Question(System.String,System.String,BCW.Foundation.Base.Messages.Enums.MessageBoxWin32ApiYesNoDefaultButtons)">
+<summary>Zeigt eine Frage-MessageBox mit Ja-Nein-Schaltflächen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Information(System.String)">
+<summary>Zeigt eine Informations-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Information(System.String,System.String)">
+<summary>Zeigt eine Informations-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Exclamation(System.String)">
+<summary>Zeigt eine Warnungs-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Exclamation(System.String,System.String)">
+<summary>Zeigt eine Warnungs-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String)">
+<summary>Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.String)">
+<summary>Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.Exception)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird die Message-Eigenschaft des übergebenen Exception-Objektes angezeigt
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.Exception)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird die Message-Eigenschaft des übergebenen Exception-Objektes angezeigt
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.String,System.Exception)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird die Message-Eigenschaft des übergebenen Exception-Objektes angezeigt
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.Exception,System.Boolean)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird der Stacktrace des übergebenen Exception-Objektes angezeigt,
+wenn showStackTrace den Wert true aufweist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.Exception,System.Boolean)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird der Stacktrace des übergebenen Exception-Objektes angezeigt,
+wenn showStackTrace den Wert true aufweist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Messages.MessageBoxWin32Api.Error(System.String,System.String,System.Exception,System.Boolean)">
+<summary>
+Zeigt eine Fehler-MessageBox mit einer OK-Schaltfläche.
+Zusätzlich wird der Stacktrace des übergebenen Exception-Objektes angezeigt,
+wenn showStackTrace den Wert true aufweist.
+</summary>
+</member>
+<member name="T:BCW.Foundation.Base.My.Resources.Resources">
+<summary>
+  Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.My.Resources.Resources.ResourceManager">
+<summary>
+  Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+</summary>
+</member>
+<member name="P:BCW.Foundation.Base.My.Resources.Resources.Culture">
+<summary>
+  Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+  Ressourcenzuordnungen, die diese stark typisierte Ressourcenklasse verwenden.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.Properties.GetPropertyInfo(System.Object,System.String)">
+<summary>
+Liefert ein PropertyInfo-Objekt für die Eigenschaft propertyName,
+anhand des übergebenen Objektes context.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.Properties.GetPropertyInfo``1(System.String)">
+<summary>
+Liefert ein PropertyInfo-Objekt für die Eigenschaft propertyName,
+der Klasse TObject.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.Properties.IsPropertyAttributeOf``2(System.String)">
+<summary>
+Prüft, ob das Attribut vom Type TAttribute, ein Attribut der Eigenschaft propertyName,
+der Klasse TObject ist.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.Properties.GetPropertyAttributeOfOrNothing``2(System.String)">
+<summary>
+Liefert das Attribut TAttribute, der Eigenschaft propertyName,
+der Klasse TObject und falls dieses nicht existiert, Null (Nothing).
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.Properties.GetPropertyInfoArrayByAttribute``2">
+<summary>
+ Liefert ein Array mit PropertyInfo-Objekten aller Eigenschaften der Klasse TObject,
+ welche über das Attribut vom Typ TAttribute verfügen.
+ </summary>
+ <typeparam name="TObject"></typeparam>
+ <typeparam name="TAttribute"></typeparam>
+ <returns></returns>
+</member>
+<member name="T:BCW.Foundation.Base.Reflection.PropertiesReader">
+<summary>
+Stellt Funktionalitat zur Verfügung, um alle lesbaren Eigenschaften
+eines Objektes auszulesen.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.GetReadablePropertyInfoList">
+<summary>Liefert ein Liste von PropertyInfo-Objekten aller lesbaren Eigenschaften.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToNameArray">
+<summary>Liefert ein Object-Array der Eigenschaftsnamen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToValueArray">
+<summary>Liefert ein Object-Array der Eigenschaftswerte.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToValueStringArray(System.Boolean)">
+<summary>Liefert ein String-Array mit den in Strings umgewandelten Eigenschaftswerten.</summary>
+<param name="nullValueToNullString">
+Wenn true wird für Null-Werte "Null" geliefert,
+sonst ein Leerstring
+</param>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToNamesString">
+<summary>Liefert einen String der Eigenschaftsnamen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToNamesString(System.String)">
+<summary>Liefert einen String der Eigenschaftsnamen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToValuesString">
+<summary>Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToValuesString(System.String)">
+<summary>Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToNamesValuesString">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten
+und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToNamesValuesString(System.String,System.String)">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten
+und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToCsvString">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten
+und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Reflection.PropertiesReader.ToCsvString(System.String,System.String,System.Boolean)">
+<summary>
+Liefert einen String mit den in Strings umgewandelten Eigenschaftswerten
+und voran gestelltem Eigenschafts-Namen.
+</summary>
+</member>
+<member name="T:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1">
+<summary>
+Für die Verwendung dieses Serialisierers muss die zu 
+serialisierende Klasse mit dem Serializable-Attribut 
+gekennzeichnet werden
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.BinaryObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.JsonObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.SoapObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToFile(`0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToStream(`0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectFromFile(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectFromStream(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToFile(System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.ObjectToStream(System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.CloneObject(`0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.CloneObject">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.IsDataEqualTo(`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.ObjectSerializers.XmlObjectSerializer`1.IsDataEqualTo(`0,`0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="T:BCW.Foundation.Base.Serialization.Serializers.Binary">
+<summary>
+Für die Verwendung dieses Serialisierers muss die zu 
+serialisierende Klasse mit dem Serializable-Attribut 
+gekennzeichnet werden
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Binary.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Json.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Soap.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectToFile``1(``0,System.String)">
+<summary>Serialisiert das Objekt in eine Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectFromFile``1(System.String)">
+<summary>Deserialisiert ein Objekt aus einer Datei.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectToStream``1(``0,System.IO.Stream)">
+<summary>Serialisiert ein Objekt in den übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.ObjectFromStream``1(System.IO.Stream)">
+<summary>Deserialisiert ein Objekt aus dem übergebenen Stream.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.CloneObject``1(``0)">
+<summary>
+Serialisiert das Objekt in einen MemoryStream und
+erzeugt per Deserialisierung eine Kopie des Objektes
+und gibt diese zurück
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.Serialization.Serializers.Xml.IsDataEqualTo``1(``0,``0)">
+<summary>
+Serialisiert beide Objekte und prüft danach, ob die Daten beider
+Objekte identisch sind.
+ </summary>
+</member>
+<member name="P:BCW.Foundation.Base.Settings.SmtpServer">
+<summary>Liefert die IP des BCW-SmtpServers.</summary>
+</member>
+<member name="P:BCW.Foundation.Base.Settings.MailServer">
+<summary>Liefert den Namen des BCW-MailServers.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.StringHandling.CultureCodes">
+ <summary>
+ Quelle: ms-help://MS.VSCC.v90/MS.MSDNQTR.v90.de/fxref_mscorlib/html/63c619e3-0969-2f01-a2d4-79d0868a98c6.htm
+ </summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.a_Default">
+ <summary>Standardsprache</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.af">
+ <summary>Afrikaans</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.af_ZA">
+ <summary>Afrikaans (Südafrika)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sq">
+ <summary>Albanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sq_AL">
+ <summary>Albanisch (Albanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar">
+ <summary>Arabisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_DZ">
+ <summary>Arabisch (Algerien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_BH">
+ <summary>Arabisch (Bahrain)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_EG">
+ <summary>Arabisch (Ägypten)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_IQ">
+ <summary>Arabisch (Irak)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_JO">
+ <summary>Arabisch (Jordanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_KW">
+ <summary>Arabisch (Kuwait)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_LB">
+ <summary>Arabisch (Libanon)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_LY">
+ <summary>Arabisch (Libyen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_MA">
+ <summary>Arabisch (Marokko)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_OM">
+ <summary>Arabisch (Oman)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_QA">
+ <summary>Arabisch (Katar)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_SA">
+ <summary>Arabisch (Saudi-Arabien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_SY">
+ <summary>Arabisch (Syrien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_TN">
+ <summary>Arabisch (Tunesien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_AE">
+ <summary>Arabisch (V.A.E.)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ar_YE">
+ <summary>Arabisch (Jemen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hy">
+ <summary>Armenisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hy_AM">
+ <summary>Armenisch (Armenien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.az">
+ <summary>Aserbaidschanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.az_Cyrl_AZ">
+ <summary>Aserbaidschanisch (Aserbaidschan, Kyrillisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.az_Latn_AZ">
+ <summary>Aserbaidschanisch (Aserbaidschan, Lateinisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.eu">
+ <summary>Baskisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.eu_ES">
+ <summary>Baskisch (Baskisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.be">
+ <summary>Belarussisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.be_BY">
+ <summary>Belarussisch (Belarus)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.bg">
+ <summary>Bulgarisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.bg_BG">
+ <summary>Bulgarisch (Bulgarien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ca">
+ <summary>Katalanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ca_ES">
+ <summary>Katalanisch (Katalanisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_HK">
+ <summary>Chinesisch (Hongkong S.A.R., VRC)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_MO">
+ <summary>Chinesisch (Macau SAR)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_CN">
+ <summary>Chinesisch (VRC)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_Hans">
+ <summary>Chinesisch (vereinfacht)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_SG">
+ <summary>Chinesisch (Singapur)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_TW">
+ <summary>Chinesisch (Taiwan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.zh_Hant">
+ <summary>Chinesisch (traditionell)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hr">
+ <summary>Kroatisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hr_HR">
+ <summary>Kroatisch (Kroatien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.cs">
+ <summary>Tschechisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.cs_CZ">
+ <summary>Tschechisch (Tschechische Republik)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.da">
+ <summary>Dänisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.da_DK">
+ <summary>Dänisch (Dänemark)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.dv">
+ <summary>Divehi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.dv_MV">
+ <summary>Divehi (Malediven)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nl">
+ <summary>Niederländisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nl_BE">
+ <summary>Niederländisch (Belgien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nl_NL">
+ <summary>Niederländisch (Niederlande)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en">
+ <summary>Englisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_AU">
+ <summary>Englisch (Australien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_BZ">
+ <summary>Englisch (Belize)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_CA">
+ <summary>Englisch (Kanada)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_029">
+ <summary>Englisch (Karibik)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_IE">
+ <summary>Englisch (Irland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_JM">
+ <summary>Englisch (Jamaika)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_NZ">
+ <summary>Englisch (Neuseeland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_PH">
+ <summary>Englisch (Philippinen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_ZA">
+ <summary>Englisch (Südafrika)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_TT">
+ <summary>Englisch (Trinidad und Tobago)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_GB">
+ <summary>Englisch (Großbritannien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_US">
+ <summary>Englisch (USA)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.en_ZW">
+ <summary>Englisch (Simbabwe)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.et">
+ <summary>Estnisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.et_EE">
+ <summary>Estnisch (Estland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fo">
+ <summary>Färingisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fo_FO">
+ <summary>Färingisch (Färöer)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fa">
+ <summary>Farsi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fa_IR">
+ <summary>Farsi (Iran)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fi">
+ <summary>Finnisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fi_FI">
+ <summary>Finnisch (Finnland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr">
+ <summary>Französisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_BE">
+ <summary>Französisch (Belgien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_CA">
+ <summary>Französisch (Kanada)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_FR">
+ <summary>Französisch (Frankreich)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_LU">
+ <summary>Französisch (Luxemburg)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_MC">
+ <summary>Französisch (Monaco)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.fr_CH">
+ <summary>Französisch (Schweiz)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gl">
+ <summary>Galizisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gl_ES">
+ <summary>Galizisch (Spanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ka">
+ <summary>Georgisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ka_GE">
+ <summary>Georgisch (Georgien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de">
+ <summary>Deutsch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_AT">
+ <summary>Deutsch (Österreich)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_DE">
+ <summary>Deutsch (Deutschland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_LI">
+ <summary>Deutsch (Liechtenstein)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_LU">
+ <summary>Deutsch (Luxemburg)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.de_CH">
+ <summary>Deutsch (Schweiz)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.el">
+ <summary>Griechisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.el_GR">
+ <summary>Griechisch (Griechenland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gu">
+ <summary>Gujarati</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.gu_IN">
+ <summary>Gujarati (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.he">
+ <summary>Hebräisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.he_IL">
+ <summary>Hebräisch (Israel)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hi">
+ <summary>Hindi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hi_IN">
+ <summary>Hindi (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hu">
+ <summary>Ungarisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.hu_HU">
+ <summary>Ungarisch (Ungarn)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.is">
+ <summary>Isländisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.is_IS">
+ <summary>Isländisch (Island)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.id">
+ <summary>Indonesisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.id_ID">
+ <summary>Indonesisch (Indonesien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.it">
+ <summary>Italienisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.it_IT">
+ <summary>Italienisch (Italien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.it_CH">
+ <summary>Italienisch (Schweiz)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ja">
+ <summary>Japanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ja_JP">
+ <summary>Japanisch (Japan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kn">
+ <summary>Kannada</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kn_IN">
+ <summary>Kannada (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kk">
+ <summary>Kasachisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kk_KZ">
+ <summary>Kasachisch (Kasachstan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kok">
+ <summary>Konkani</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.kok_IN">
+ <summary>Konkani (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ko">
+ <summary>Koreanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ko_KR">
+ <summary>Koreanisch (Korea)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ky">
+ <summary>Kirgisisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ky_KG">
+ <summary>Kirgisisch (Kirgisistan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lv">
+ <summary>Lettisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lv_LV">
+ <summary>Lettisch (Lettland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lt">
+ <summary>Litauisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.lt_LT">
+ <summary>Litauisch (Litauen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mk">
+ <summary>Mazedonisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mk_MK">
+ <summary>Mazedonisch (Mazedonien, FYROM)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ms">
+ <summary>Malaiisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ms_BN">
+ <summary>Malaiisch (Brunei Darussalam)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ms_MY">
+ <summary>Malaiisch (Malaysia)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mr">
+ <summary>Marathi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mr_IN">
+ <summary>Marathi (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mn">
+ <summary>Mongolisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.mn_MN">
+ <summary>Mongolisch (Mongolei)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.no">
+ <summary>Norwegisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nb_NO">
+ <summary>Norwegisch (Bokmål, Norwegen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.nn_NO">
+ <summary>Norwegisch (Nynorsk, Norwegen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pl">
+ <summary>Polnisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pl_PL">
+ <summary>Polnisch (Polen)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pt">
+ <summary>Portugiesisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pt_BR">
+ <summary>Portugiesisch (Brasilien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pt_PT">
+ <summary>Portugiesisch (Portugal)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pa">
+ <summary>Punjabi</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.pa_IN">
+ <summary>Punjabi (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ro">
+ <summary>Rumänisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ro_RO">
+ <summary>Rumänisch (Rumänien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ru">
+ <summary>Russisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ru_RU">
+ <summary>Russisch (Russland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sa">
+ <summary>Sanskrit</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sa_IN">
+ <summary>Sanskrit (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sr_Cyrl_CS">
+ <summary>Serbisch (Serbien, Kyrillisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sr_Latn_CS">
+ <summary>Serbisch (Serbien, Lateinisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sk">
+ <summary>Slowakisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sk_SK">
+ <summary>Slowakisch (Slowakei)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sl">
+ <summary>Slowenisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sl_SI">
+ <summary>Slowenisch (Slowenien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es">
+ <summary>Spanisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_AR">
+ <summary>Spanisch (Argentinien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_BO">
+ <summary>Spanisch (Bolivien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_CL">
+ <summary>Spanisch (Chile)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_CO">
+ <summary>Spanisch (Kolumbien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_CR">
+ <summary>Spanisch (Costa Rica)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_DO">
+ <summary>Spanisch (Dominikanische Republik)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_EC">
+ <summary>Spanisch (Ecuador)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_SV">
+ <summary>Spanisch (El Salvador)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_GT">
+ <summary>Spanisch (Guatemala)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_HN">
+ <summary>Spanisch (Honduras)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_MX">
+ <summary>Spanisch (Mexiko)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_NI">
+ <summary>Spanisch (Nicaragua)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PA">
+ <summary>Spanisch (Panama)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PY">
+ <summary>Spanisch (Paraguay)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PE">
+ <summary>Spanisch (Peru)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_PR">
+ <summary>Spanisch (Puerto Rico)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_ES">
+ <summary>Spanisch (Spanien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_ES_tradnl">
+ <summary>Spanisch (Spanien, herkömmliche Sortierreihenfolge)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_UY">
+ <summary>Spanisch (Uruguay)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.es_VE">
+ <summary>Spanisch (Venezuela)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sw">
+ <summary>Swahili</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sw_KE">
+ <summary>Swahili (Kenia)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sv">
+ <summary>Schwedisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sv_FI">
+ <summary>Schwedisch (Finnland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.sv_SE">
+ <summary>Schwedisch (Schweden)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.syr">
+ <summary>Syrisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.syr_SY">
+ <summary>Syrisch (Syrien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ta">
+ <summary>Tamil</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ta_IN">
+ <summary>Tamil (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tt">
+ <summary>Tatarisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tt_RU">
+ <summary>Tatarisch (Russland)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.te">
+ <summary>Telugu</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.te_IN">
+ <summary>Telugu (Indien)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.th">
+ <summary>Thai</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.th_TH">
+ <summary>Thai (Thailand)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tr">
+ <summary>Türkisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.tr_TR">
+ <summary>Türkisch (Türkei)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uk">
+ <summary>Ukrainisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uk_UA">
+ <summary>Ukrainisch (Ukraine)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ur">
+ <summary>Urdu</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.ur_PK">
+ <summary>Urdu (Pakistan)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uz">
+ <summary>Usbekisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uz_Cyrl_UZ">
+ <summary>Usbekisch (Usbekistan, Kyrillisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.uz_Latn_UZ">
+ <summary>Usbekisch (Usbekistan, Lateinisch)</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.vi">
+ <summary>Vietnamesisch</summary>
+</member>
+<member name="F:BCW.Foundation.Base.StringHandling.CultureCodes.vi_VN">
+ <summary>Vietnamesisch (Vietnam)</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringMethods.GetStringFormat(System.String,System.Object[])">
+ <summary>
+ Ersetzt die in s vorhandenen Platzhalter {0}, {1} ...
+ mit den im ParamArray args angegebenen Werten.
+ </summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringMethods.ReplaceEscapeMySql(System.String)">
+<summary>Maskiert einen String für eine MySQL-Abfrage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.StringHandling.StringMethods.CommaToPoint(System.String)">
+<summary>Wandelt im String s Kommata in Punkte um und liefert diesen zurück.</summary>
+</member>
+<member name="T:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue">
+<summary>
+	Public Sub New(ByVal name As String)
+
+	MessageQueue.Instance.AddSubscriber(Of CommonSystemMessage) _
+	(Me, AddressOf OnCommonSystemMessageArrived)
+End Sub
+
+Private Sub OnCommonSystemMessageArrived(ByVal message As ISystemMessage)
+		Console.WriteLine(message.MessageName)
+End Sub
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.AddSubscriber``1(System.Object,System.Action{BCW.Foundation.Base.SystemMessaging.Interfaces.ISystemMessage})">
+<summary>
+Fügt den Beobachter subscriber der SystemMessage TMessage hinzu 
+und legt die CallBack-Methode messageArrivedAction fest.
+</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.RemoveSubscriber``1(System.Object)">
+<summary>Entfernt den Beobachter subscriber der SystemMessage TMessage.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.SendSystemMessage(BCW.Foundation.Base.SystemMessaging.Interfaces.ISystemMessage)">
+<summary>Wirft die SystemMessage message und ruft die CallBack-Methode der Beobachter auf.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.GetAddedMessageTypes">
+<summary>Liefert eine Collection der registrierten SystemMessage-Typen.</summary>
+</member>
+<member name="M:BCW.Foundation.Base.SystemMessaging.SystemMessageQueue.GetAddedSubscribers``1">
+<summary>Liefert eine Colection aller Beobachter der SystemMessage TMessage.</summary>
+</member>
+</members>
+</doc>

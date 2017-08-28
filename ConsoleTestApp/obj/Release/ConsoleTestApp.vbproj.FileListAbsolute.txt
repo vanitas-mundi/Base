@@ -1,0 +1,14 @@
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\ConsoleTestApp.exe.config
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\ConsoleTestApp.exe
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\ConsoleTestApp.pdb
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\ConsoleTestApp.xml
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\Base.dll
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\Base.pdb
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\Base.xml
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\bin\Release\Base.dll.config
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Release\ConsoleTestApp.vbprojResolveAssemblyReference.cache
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Release\BCW.Testing.ConsoleTestApp.Resources.resources
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Release\ConsoleTestApp.vbproj.GenerateResource.Cache
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Release\ConsoleTestApp.exe
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Release\ConsoleTestApp.xml
+C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Release\ConsoleTestApp.pdb
