@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="MessageBoxWin32ApiQuestionCaption" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Frage: {0}</Value>
+    </Setting>
+    <Setting Name="MessageBoxWin32ApiErrorCaption" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Fehler: {0}</Value>
+    </Setting>
+    <Setting Name="MessageBoxWin32ApiInformationCaption" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Information: {0}</Value>
+    </Setting>
+    <Setting Name="MessageBoxWin32ApiExclamationCaption" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Warnung: {0}</Value>
+    </Setting>
+    <Setting Name="SettingsBCWSmtpServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mail.bildungscentrum.de</Value>
+    </Setting>
+    <Setting Name="SettingsBCWMailServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mail.bildungscentrum.de</Value>
+    </Setting>
+    <Setting Name="SettingsBCWDevelopPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\_development</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
