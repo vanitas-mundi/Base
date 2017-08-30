@@ -3,12 +3,12 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.Attributes
+Imports SSP.Base.Attributes
 #End Region
 
 Namespace ReflectionHandling
 
-  Public Class ReflectionEnum
+    Public Class ReflectionEnum
 
 #Region " --------------->> Enumerationen der Klasse "
 #End Region '{Enumerationen der Klasse}
@@ -17,8 +17,8 @@ Namespace ReflectionHandling
 #End Region '{Eigenschaften der Klasse}
 
 #Region " --------------->> Konstruktor und Destruktor der Klasse "
-    Friend Sub New()
-    End Sub
+        Friend Sub New()
+        End Sub
 #End Region '{Konstruktor und Destruktor der Klasse}
 
 #Region " --------------->> Zugriffsmethoden der Klasse "
@@ -31,50 +31,50 @@ Namespace ReflectionHandling
 #End Region '{Private Methoden der Klasse}
 
 #Region " --------------->> Öffentliche Methoden der Klasse "
-    '''<summary>
-    '''Ermittelt alle EnumDisplayName-Attribute des übergebenen
-    '''EnumTypes und liefert deren DisplayName-Eigenschaften oder
-    '''den in einen String gewandelten Enum-Wert, wenn das Attribut
-    '''nicht gesetzt wurde.
-    '''</summary>
-    Public Function DisplayNames(ByVal enumType As Type) As String()
+        '''<summary>
+        '''Ermittelt alle EnumDisplayName-Attribute des übergebenen
+        '''EnumTypes und liefert deren DisplayName-Eigenschaften oder
+        '''den in einen String gewandelten Enum-Wert, wenn das Attribut
+        '''nicht gesetzt wurde.
+        '''</summary>
+        Public Function DisplayNames(ByVal enumType As Type) As String()
 
-      Dim result = New List(Of String)
+            Dim result = New List(Of String)
 
-      System.Enum.GetValues(enumType).OfType(Of Object).ToList.ForEach _
-      (Sub(x) result.Add(ValueToDisplayName(x)))
+            System.Enum.GetValues(enumType).OfType(Of Object).ToList.ForEach _
+            (Sub(x) result.Add(ValueToDisplayName(x)))
 
-      Return result.ToArray
-    End Function
+            Return result.ToArray
+        End Function
 
-    '''<summary>Liefert den Enum-Value zum angegebenen displayName.</summary>
-    Public Function DisplayNameToValue(ByVal enumType As Type, ByVal displayName As String) As Object
+        '''<summary>Liefert den Enum-Value zum angegebenen displayName.</summary>
+        Public Function DisplayNameToValue(ByVal enumType As Type, ByVal displayName As String) As Object
 
-      Dim result = New Dictionary(Of String, Object)
+            Dim result = New Dictionary(Of String, Object)
 
-      Dim temp = System.Enum.GetValues(enumType).OfType(Of Object).ToList
-      temp.ForEach(Sub(x) result.Add(ValueToDisplayName(x), x))
+            Dim temp = System.Enum.GetValues(enumType).OfType(Of Object).ToList
+            temp.ForEach(Sub(x) result.Add(ValueToDisplayName(x), x))
 
-      Return result.Item(displayName)
-    End Function
+            Return result.Item(displayName)
+        End Function
 
-    '''<summary>Liefert den Displayname zum angegebenen Enum-Value.</summary>
-    Public Function ValueToDisplayName(ByVal enumValue As Object) As String
+        '''<summary>Liefert den Displayname zum angegebenen Enum-Value.</summary>
+        Public Function ValueToDisplayName(ByVal enumValue As Object) As String
 
-      Dim enumField = enumValue.GetType.GetField(enumValue.ToString)
-      Dim result = enumField.GetCustomAttributes(False).OfType(Of EnumDisplayNameAttribute).FirstOrDefault?.DisplayName
+            Dim enumField = enumValue.GetType.GetField(enumValue.ToString)
+            Dim result = enumField.GetCustomAttributes(False).OfType(Of EnumDisplayNameAttribute).FirstOrDefault?.DisplayName
 
-      Return If(result, enumValue.ToString)
-    End Function
+            Return If(result, enumValue.ToString)
+        End Function
 
-    '''<summary>Liefert den Displaynamen zum angegebenen Enum-Value.</summary>
-    Public Function GetEnumValueAttribute(Of T As Attribute)(ByVal enumValue As Object) As T
+        '''<summary>Liefert den Displaynamen zum angegebenen Enum-Value.</summary>
+        Public Function GetEnumValueAttribute(Of T As Attribute)(ByVal enumValue As Object) As T
 
-      Dim enumField = enumValue.GetType.GetField(enumValue.ToString)
-      Return enumField.GetCustomAttributes(False).OfType(Of T).FirstOrDefault
-    End Function
+            Dim enumField = enumValue.GetType.GetField(enumValue.ToString)
+            Return enumField.GetCustomAttributes(False).OfType(Of T).FirstOrDefault
+        End Function
 #End Region '{Öffentliche Methoden der Klasse}
 
-  End Class
+    End Class
 
 End Namespace

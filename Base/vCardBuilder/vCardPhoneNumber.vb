@@ -3,7 +3,7 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.vCardBuilder.Enums
+Imports SSP.Base.vCardBuilder.Enums
 #End Region
 
 Namespace vCardBuilder

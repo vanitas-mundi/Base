@@ -3,7 +3,7 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.Serialization.ObjectSerializers
+Imports SSP.Base.Serialization.ObjectSerializers
 #End Region
 
 Namespace Serialization

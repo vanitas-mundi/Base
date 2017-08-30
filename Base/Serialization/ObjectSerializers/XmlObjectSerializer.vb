@@ -4,7 +4,7 @@ Option Strict On
 
 #Region " --------------->> Imports/ usings "
 Imports System.IO
-Imports BCW.Foundation.Base.Serialization.Interfaces
+Imports SSP.Base.Serialization.Interfaces
 #End Region
 
 Namespace Serialization.ObjectSerializers

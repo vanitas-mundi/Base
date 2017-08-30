@@ -3,7 +3,7 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.Logging
+Imports SSP.Base.Logging
 #End Region
 
 Namespace ErrorHandling

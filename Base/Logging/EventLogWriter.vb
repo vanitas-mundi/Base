@@ -4,7 +4,7 @@ Option Strict On
 
 #Region " --------------->> Imports/ usings "
 Imports System.Diagnostics
-Imports BCW.Foundation.Base.Logging.Enums
+Imports SSP.Base.Logging.Enums
 #End Region
 
 Namespace Logging

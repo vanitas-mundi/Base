@@ -5,8 +5,8 @@ Option Strict On
 #Region " --------------->> Imports/ usings "
 Imports System.IO
 Imports System.Xml.Serialization
-Imports BCW.Foundation.Base.Serialization.Interfaces
-Imports BCW.Foundation.Base.ExtensionMethods.EnumerableExtensions
+Imports SSP.Base.Serialization.Interfaces
+Imports SSP.Base.ExtensionMethods.EnumerableExtensions
 #End Region
 
 Namespace Serialization.Serializers

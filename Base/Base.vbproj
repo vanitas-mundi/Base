@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{752E8911-60E4-4CEA-BF25-99411A134103}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>BCW.Foundation.Base</RootNamespace>
+    <RootNamespace>SSP.Base</RootNamespace>
     <AssemblyName>Base</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

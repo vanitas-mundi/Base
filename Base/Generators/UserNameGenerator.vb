@@ -4,7 +4,7 @@ Option Strict On
 
 #Region " --------------->> Imports "
 Imports System.Text
-Imports BCW.Foundation.Base.Generators.Interfaces
+Imports SSP.Base.Generators.Interfaces
 #End Region
 
 Namespace Generators

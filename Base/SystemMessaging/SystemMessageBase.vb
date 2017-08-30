@@ -3,7 +3,7 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.SystemMessaging.Interfaces
+Imports SSP.Base.SystemMessaging.Interfaces
 #End Region
 
 Namespace SystemMessaging

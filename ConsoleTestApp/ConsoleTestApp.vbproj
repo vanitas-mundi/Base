@@ -7,11 +7,11 @@
     <ProjectGuid>{B8DCC150-A78C-4D70-809A-19CE3C763F11}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <StartupObject>Sub Main</StartupObject>
-    <RootNamespace>BCW.Testing.ConsoleTestApp</RootNamespace>
+    <RootNamespace>SSP.Testing.ConsoleTestApp</RootNamespace>
     <AssemblyName>ConsoleTestApp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Console</MyType>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
   </PropertyGroup>

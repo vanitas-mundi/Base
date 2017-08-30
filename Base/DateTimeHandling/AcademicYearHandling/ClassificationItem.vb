@@ -3,8 +3,8 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Enums
-Imports BCW.Foundation.Base.DateTimeHandling.AcademicYearHandling.Interfaces
+Imports SSP.Base.DateTimeHandling.AcademicYearHandling.Enums
+Imports SSP.Base.DateTimeHandling.AcademicYearHandling.Interfaces
 #End Region
 
 Namespace DateTimeHandling.AcademicYearHandling

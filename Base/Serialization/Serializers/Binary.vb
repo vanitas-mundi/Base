@@ -5,8 +5,8 @@ Option Strict On
 #Region " --------------->> Imports/ usings "
 Imports System.IO
 Imports System.Runtime.Serialization.Formatters.Binary
-Imports BCW.Foundation.Base.ExtensionMethods
-Imports BCW.Foundation.Base.Serialization.Interfaces
+Imports SSP.Base.ExtensionMethods
+Imports SSP.Base.Serialization.Interfaces
 #End Region
 
 Namespace Serialization.Serializers

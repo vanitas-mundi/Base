@@ -3,9 +3,9 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.DateTimeHandling.Interfaces
-Imports BCW.Foundation.Base.DateTimeHandling.PublicHolidays.Interfaces
-Imports BCW.Foundation.Base.StringHandling
+Imports SSP.Base.DateTimeHandling.Interfaces
+Imports SSP.Base.DateTimeHandling.PublicHolidays.Interfaces
+Imports SSP.Base.StringHandling
 #End Region
 
 Namespace DateTimeHandling

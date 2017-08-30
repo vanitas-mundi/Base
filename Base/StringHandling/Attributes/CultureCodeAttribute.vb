@@ -3,7 +3,7 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.StringHandling
+Imports SSP.Base.StringHandling
 #End Region
 
 Namespace StringHandling.Attributes

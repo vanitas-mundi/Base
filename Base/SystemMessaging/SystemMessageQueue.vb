@@ -4,7 +4,7 @@ Option Strict On
 
 #Region " --------------->> Imports/ usings "
 Imports System.Reflection
-Imports BCW.Foundation.Base.SystemMessaging.Interfaces
+Imports SSP.Base.SystemMessaging.Interfaces
 #End Region
 
 Namespace SystemMessaging

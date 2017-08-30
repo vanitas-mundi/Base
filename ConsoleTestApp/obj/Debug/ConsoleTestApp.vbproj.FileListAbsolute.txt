@@ -11,3 +11,10 @@ C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.vbproj.
 C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.exe
 C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.xml
 C:\_projects\BCW\Foundation\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.pdb
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.vbprojResolveAssemblyReference.cache
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\SSP.Testing.ConsoleTestApp.Resources.resources
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.vbproj.GenerateResource.Cache
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.vbproj.CoreCompileInputs.cache
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.exe
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.xml
+C:\GitHub\Base\ConsoleTestApp\obj\Debug\ConsoleTestApp.pdb

@@ -3,7 +3,7 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.StringHandling.Attributes
+Imports SSP.Base.StringHandling.Attributes
 #End Region
 
 Namespace DateTimeHandling.Enums

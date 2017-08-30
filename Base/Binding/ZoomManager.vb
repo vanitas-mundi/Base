@@ -1,9 +1,9 @@
 ﻿Option Explicit On
 Option Infer On
 Option Strict On
-Imports BCW.Foundation.Base.Binding
 
 #Region " --------------->> Imports/ usings "
+Imports SSP.Base.Binding
 #End Region
 
 Namespace Core

@@ -3,8 +3,8 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.Messages
-Imports BCW.Foundation.Base.Messages.Enums
+Imports SSP.Base.Messages
+Imports SSP.Base.Messages.Enums
 #End Region
 
 'Namespace Models.NewModels

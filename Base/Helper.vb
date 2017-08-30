@@ -3,12 +3,12 @@ Option Infer On
 Option Strict On
 
 #Region " --------------->> Imports/ usings "
-Imports BCW.Foundation.Base.Cryptography
-Imports BCW.Foundation.Base.DateTimeHandling
-Imports BCW.Foundation.Base.IOHandling
-Imports BCW.Foundation.Base.NumberHandling
-Imports BCW.Foundation.Base.ReflectionHandling
-Imports BCW.Foundation.Base.StringHandling
+Imports SSP.Base.Cryptography
+Imports SSP.Base.DateTimeHandling
+Imports SSP.Base.IOHandling
+Imports SSP.Base.NumberHandling
+Imports SSP.Base.ReflectionHandling
+Imports SSP.Base.StringHandling
 #End Region
 
 'Namespace

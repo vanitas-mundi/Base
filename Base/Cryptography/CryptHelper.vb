@@ -6,7 +6,7 @@ Option Strict On
 Imports System.IO
 Imports System.Security.Cryptography
 Imports System.Text
-Imports BCW.Foundation.Base.Cryptography.Hashes
+Imports SSP.Base.Cryptography.Hashes
 #End Region
 
 Namespace Cryptography
