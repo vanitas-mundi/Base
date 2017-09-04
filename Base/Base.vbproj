@@ -97,6 +97,8 @@
     <Compile Include="Binding\NotifyPropertyChangedBase.vb" />
     <Compile Include="Binding\ZoomFactorChangedEvenArgs.vb" />
     <Compile Include="Binding\ZoomManager.vb" />
+    <Compile Include="CB.vb" />
+    <Compile Include="ControlCodes.vb" />
     <Compile Include="CSVHandling\CSVObject.vb" />
     <Compile Include="DateTimeHandling\AcademicYearHandling\AcademicYear.vb" />
     <Compile Include="DateTimeHandling\AcademicYearHandling\AcademicYearClassification.vb" />
